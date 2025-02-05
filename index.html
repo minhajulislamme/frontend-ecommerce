@@ -15,7 +15,7 @@
 </head>
 <body class="bg-gray-100 font-jost">
    <!-- top bar start  -->
-    <div class="bg-white shadow-sm">
+    <div class="sticky top-0 z-50 bg-white shadow-sm">
         <!-- Desktop View -->
         <div class="max-w-7xl mx-auto hidden lg:flex items-center py-2 px-4">
             <div class="flex items-center space-x-4">
@@ -39,28 +39,33 @@
             </div>
         </div>
 
-        <!-- Mobile/Tablet View -->
-        <div class="lg:hidden">
-            <!-- Mobile Header -->
-            <div class="flex items-center justify-between p-4">
-                <div class="flex items-center space-x-3">
-                    <img src="https://placehold.co/32x32" class="w-8 h-8 md:w-10 md:h-10 rounded-md" alt="">
-                    <a href="#" class="text-xl md:text-2xl text-rose-400 font-semibold">E-commerce</a>
-                </div>
-                <button class="text-gray-500 hover:text-rose-400" onclick="toggleMenu()">
-                    <i class="ri-menu-line text-2xl md:text-3xl"></i>
-                </button>
-            </div>
-            <!-- Mobile Search -->
-            <div class="px-4 pb-3">
-                <div class="relative max-w-2xl mx-auto">
-                    <input type="text" placeholder="Search for products" class="w-full block border border-gray-300 bg-gray-100 rounded-md px-4 py-2 md:py-3 pl-10 outline-none focus:border-rose-400">
-                    <i class="ri-search-line absolute left-3 top-1/2 -translate-y-1/2 text-gray-400"></i>
-                </div>
+      
+    </div>
+
+    <!-- Move search bar outside and make it sticky -->
+    <div class="sticky top-0 z-40 bg-white shadow-sm lg:hidden">
+        <div class="px-4 py-2">
+            <div class="relative max-w-2xl mx-auto">
+                <input type="text" 
+                    placeholder="Search for products" 
+                    class="w-full block border border-gray-300 bg-gray-100 rounded-md px-4 py-2 md:py-3 pl-10 outline-none focus:border-rose-400">
+                <i class="ri-search-line absolute left-3 top-1/2 -translate-y-1/2 text-gray-400"></i>
             </div>
         </div>
     </div>
-
+  <!-- Mobile/Tablet View -->
+  <div class="lg:hidden">
+    <!-- Mobile Header -->
+    <div class="flex items-center justify-between p-4">
+        <div class="flex items-center space-x-3">
+            <img src="https://placehold.co/32x32" class="w-8 h-8 md:w-10 md:h-10 rounded-md" alt="">
+            <a href="#" class="text-xl md:text-2xl text-rose-400 font-semibold">E-commerce</a>
+        </div>
+        <button class="text-gray-500 hover:text-rose-400" onclick="toggleMenu()">
+            <i class="ri-menu-line text-2xl md:text-3xl"></i>
+        </button>
+    </div>
+</div>
     <!-- Mobile Side Menu -->
     <div id="mobileMenu" class="fixed inset-0 bg-black/50 bg-opacity-50 z-50 hidden lg:hidden">
         <div id="menuContent" class="fixed top-0 left-0 bottom-0 w-80 md:w-96 bg-white transform -translate-x-full transition-transform duration-300 ease-in-out">
@@ -285,7 +290,7 @@
     <!-- Main Content -->
 
    <!-- banner slider start  -->
-    <div class="max-w-7xl mx-auto px-4 py-4">
+    <div class="max-w-7xl mx-auto px-4 py-2">
         <div class="swiper bannerSwiper rounded-lg overflow-hidden">
             <div class="swiper-wrapper">
                 <div class="swiper-slide">
@@ -302,6 +307,142 @@
         </div>
     </div>
     <!-- banner slider end  -->
+
+    <!-- product category start -->
+    <div class="max-w-7xl mx-auto  px-4 py-2">
+        <h2 class="text-2xl sm:text-3xl font-semibold text-gray-800 mb-4">Product Categories</h2>
+        <div class="grid grid-cols-4 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-8 gap-2 sm:gap-4">
+            <!-- Category Item -->
+            <a href="#" class="flex flex-col items-center group p-2 sm:p-3 bg-white rounded-lg hover:shadow-lg transition-all duration-300">
+                <div class="w-full aspect-square rounded-lg overflow-hidden mb-1 sm:mb-2">
+                    <img src="https://placehold.co/200x200" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-300" alt="Phones">
+                </div>
+                <span class="font-medium text-[10px] sm:text-sm text-gray-800 group-hover:text-rose-500 text-center">Phones</span>
+            </a>
+
+            <!-- Category Item -->
+            <a href="#" class="flex flex-col items-center group p-2 sm:p-3 bg-white rounded-lg hover:shadow-lg transition-all duration-300">
+                <div class="w-full aspect-square rounded-lg overflow-hidden mb-1 sm:mb-2">
+                    <img src="https://placehold.co/200x200" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-300" alt="Fashion">
+                </div>
+                <span class="font-medium text-[10px] sm:text-sm text-gray-800 group-hover:text-rose-500 text-center">Fashion</span>
+            </a>
+             <!-- Category Item -->
+             <a href="#" class="flex flex-col items-center group p-2 sm:p-3 bg-white rounded-lg hover:shadow-lg transition-all duration-300">
+                <div class="w-full aspect-square rounded-lg overflow-hidden mb-1 sm:mb-2">
+                    <img src="https://placehold.co/200x200" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-300" alt="Fashion">
+                </div>
+                <span class="font-medium text-[10px] sm:text-sm text-gray-800 group-hover:text-rose-500 text-center">Fashion</span>
+            </a>
+             <!-- Category Item -->
+             <a href="#" class="flex flex-col items-center group p-2 sm:p-3 bg-white rounded-lg hover:shadow-lg transition-all duration-300">
+                <div class="w-full aspect-square rounded-lg overflow-hidden mb-1 sm:mb-2">
+                    <img src="https://placehold.co/200x200" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-300" alt="Fashion">
+                </div>
+                <span class="font-medium text-[10px] sm:text-sm text-gray-800 group-hover:text-rose-500 text-center">Fashion</span>
+            </a>
+             <!-- Category Item -->
+             <a href="#" class="flex flex-col items-center group p-2 sm:p-3 bg-white rounded-lg hover:shadow-lg transition-all duration-300">
+                <div class="w-full aspect-square rounded-lg overflow-hidden mb-1 sm:mb-2">
+                    <img src="https://placehold.co/200x200" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-300" alt="Fashion">
+                </div>
+                <span class="font-medium text-[10px] sm:text-sm text-gray-800 group-hover:text-rose-500 text-center">Fashion</span>
+            </a>
+            <!-- Category Item -->
+            <a href="#" class="flex flex-col items-center group p-2 sm:p-3 bg-white rounded-lg hover:shadow-lg transition-all duration-300">
+                <div class="w-full aspect-square rounded-lg overflow-hidden mb-1 sm:mb-2">
+                    <img src="https://placehold.co/200x200" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-300" alt="Fashion">
+                </div>
+                <span class="font-medium text-[10px] sm:text-sm text-gray-800 group-hover:text-rose-500 text-center">Fashion</span>
+            </a>
+            <!-- Category Item -->
+            <a href="#" class="flex flex-col items-center group p-2 sm:p-3 bg-white rounded-lg hover:shadow-lg transition-all duration-300">
+                <div class="w-full aspect-square rounded-lg overflow-hidden mb-1 sm:mb-2">
+                    <img src="https://placehold.co/200x200" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-300" alt="Fashion">
+                </div>
+                <span class="font-medium text-[10px] sm:text-sm text-gray-800 group-hover:text-rose-500 text-center">Fashion</span>
+            </a>
+            <!-- Category Item -->
+            <a href="#" class="flex flex-col items-center group p-2 sm:p-3 bg-white rounded-lg hover:shadow-lg transition-all duration-300">
+                <div class="w-full aspect-square rounded-lg overflow-hidden mb-1 sm:mb-2">
+                    <img src="https://placehold.co/200x200" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-300" alt="Fashion">
+                </div>
+                <span class="font-medium text-[10px] sm:text-sm text-gray-800 group-hover:text-rose-500 text-center">Fashion</span>
+            </a>
+
+            <!-- Add more category items with the same pattern -->
+        </div>
+    </div>
+    <!-- product category end -->
+
+    <!-- product start  -->
+    <div class="max-w-7xl mx-auto px-4 py-2">
+        <h2 class="text-2xl sm:text-3xl font-semibold text-gray-800 mb-4">New Arrivals</h2>
+        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
+            <!-- Product Item -->
+            <a href="#" class="group relative bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-all duration-300">
+                <div class="aspect-square">
+                    <img src="https://placehold.co/400x400" class="w-full h-full object-cover" alt="Product 1">
+                </div>
+                <div class="p-4">
+                    <h3 class="font-semibold text-gray-800">Product 1</h3>
+                    <div class="flex items-center justify-between mt-2">
+                        <span class="text-rose-500 font-semibold">$99.99</span>
+                        <button class="text-gray-500 hover:text-rose-500">
+                            <i class="ri-heart-line"></i>
+                        </button>
+                    </div>
+                </div>
+            </a>
+
+            <!-- Product Item -->
+            <a href="#" class="group relative bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-all duration-300">
+                <div class="aspect-square">
+                    <img src="https://placehold.co/400x400" class="w-full h-full object-cover" alt="Product 2">
+                </div>
+                <div class="p-4">
+                    <h3 class="font-semibold text-gray-800">Product 2</h3>
+                    <div class="flex items-center justify-between mt-2">
+                        <span class="text-rose-500 font-semibold">$99.99</span>
+                        <button class="text-gray-500 hover:text-rose-500">
+                            <i class="ri-heart-line"></i>
+                        </button>
+                    </div>
+                </div>
+            </a>
+
+             <!-- Product Item -->
+             <a href="#" class="group relative bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-all duration-300">
+                <div class="aspect-square">
+                    <img src="https://placehold.co/400x400" class="w-full h-full object-cover" alt="Product 2">
+                </div>
+                <div class="p-4">
+                    <h3 class="font-semibold text-gray-800">Product 2</h3>
+                    <div class="flex items-center justify-between mt-2">
+                        <span class="text-rose-500 font-semibold">$99.99</span>
+                        <button class="text-gray-500 hover:text-rose-500">
+                            <i class="ri-heart-line"></i>
+                        </button>
+                    </div>
+                </div>
+            </a>
+             <!-- Product Item -->
+             <a href="#" class="group relative bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-all duration-300">
+                <div class="aspect-square">
+                    <img src="https://placehold.co/400x400" class="w-full h-full object-cover" alt="Product 2">
+                </div>
+                <div class="p-4">
+                    <h3 class="font-semibold text-gray-800">Product 2</h3>
+                    <div class="flex items-center justify-between mt-2">
+                        <span class="text-rose-500 font-semibold">$99.99</span>
+                        <button class="text-gray-500 hover:text-rose-500">
+                            <i class="ri-heart-line"></i>
+                        </button>
+                    </div>
+                </div>
+            </a>
+        </div>
+            
 
 
 
@@ -449,6 +590,35 @@
                 disableOnInteraction: false,
             }
         });
+
+        // Add scroll event listener for sticky search
+        let lastScroll = 0;
+        const stickySearch = document.getElementById('stickySearch');
+        
+        window.addEventListener('scroll', () => {
+            const currentScroll = window.pageYOffset;
+            
+            if (currentScroll > 150) { // Show after scrolling 150px
+                if (currentScroll > lastScroll) {
+                    // Scrolling down
+                    stickySearch.style.transform = 'translateY(0)';
+                }
+            } else {
+                // At top
+                stickySearch.style.transform = 'translateY(-100%)';
+            }
+            
+            lastScroll = currentScroll;
+        });
     </script>
+    <style>
+        /* Add these styles */
+        @supports (backdrop-filter: blur(10px)) {
+            .sticky {
+                backdrop-filter: blur(10px);
+                background-color: rgba(255, 255, 255, 0.95);
+            }
+        }
+    </style>
 </body>
 </html>
