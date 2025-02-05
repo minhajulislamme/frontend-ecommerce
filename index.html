@@ -9,12 +9,15 @@
     href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet"/>
     <!-- CSS -->
     <link rel="stylesheet" href="src/css/style.css">
+    <!-- Add Swiper CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 </head>
 <body class="bg-gray-100 font-jost">
    <!-- top bar start  -->
     <div class="bg-white shadow-sm">
         <!-- Desktop View -->
-        <div class="max-w-7xl mx-auto hidden md:flex items-center py-2 px-4">
+        <div class="max-w-7xl mx-auto hidden lg:flex items-center py-2 px-4">
             <div class="flex items-center space-x-4">
                 <img src="https://placehold.co/32x32" class="w-10 h-10 rounded-md" alt="">
                 <a href="#" class="text-2xl text-rose-400 font-semibold">E-commerce</a>
@@ -37,21 +40,21 @@
         </div>
 
         <!-- Mobile/Tablet View -->
-        <div class="md:hidden">
+        <div class="lg:hidden">
             <!-- Mobile Header -->
             <div class="flex items-center justify-between p-4">
                 <div class="flex items-center space-x-3">
-                    <img src="https://placehold.co/32x32" class="w-8 h-8 rounded-md" alt="">
-                    <a href="#" class="text-xl text-rose-400 font-semibold">E-commerce</a>
+                    <img src="https://placehold.co/32x32" class="w-8 h-8 md:w-10 md:h-10 rounded-md" alt="">
+                    <a href="#" class="text-xl md:text-2xl text-rose-400 font-semibold">E-commerce</a>
                 </div>
                 <button class="text-gray-500 hover:text-rose-400" onclick="toggleMenu()">
-                    <i class="ri-menu-line text-2xl"></i>
+                    <i class="ri-menu-line text-2xl md:text-3xl"></i>
                 </button>
             </div>
             <!-- Mobile Search -->
             <div class="px-4 pb-3">
-                <div class="relative">
-                    <input type="text" placeholder="Search for products" class="w-full block border border-gray-300 bg-gray-100 rounded-md px-4 py-2 pl-10 outline-none focus:border-rose-400">
+                <div class="relative max-w-2xl mx-auto">
+                    <input type="text" placeholder="Search for products" class="w-full block border border-gray-300 bg-gray-100 rounded-md px-4 py-2 md:py-3 pl-10 outline-none focus:border-rose-400">
                     <i class="ri-search-line absolute left-3 top-1/2 -translate-y-1/2 text-gray-400"></i>
                 </div>
             </div>
@@ -59,39 +62,33 @@
     </div>
 
     <!-- Mobile Side Menu -->
-    <div id="mobileMenu" class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden md:hidden">
-        <div id="menuContent" class="fixed top-0 left-0 bottom-0 w-80 bg-white transform -translate-x-full transition-transform duration-300 ease-in-out">
+    <div id="mobileMenu" class="fixed inset-0 bg-black/50 bg-opacity-50 z-50 hidden lg:hidden">
+        <div id="menuContent" class="fixed top-0 left-0 bottom-0 w-80 md:w-96 bg-white transform -translate-x-full transition-transform duration-300 ease-in-out">
             <!-- Menu Header -->
-            <div class="flex items-center justify-between p-4 border-b  border-rose-300">
+            <div class="flex items-center justify-between p-4 md:p-6 border-b border-rose-300">
                 <div class="flex items-center space-x-3">
-                    <img src="https://placehold.co/32x32" class="w-8 h-8 rounded-md" alt="">
-                    <span class="text-xl font-semibold text-rose-400">E-commerce</span>
+                    <img src="https://placehold.co/32x32" class="w-8 h-8 md:w-10 md:h-10 rounded-md" alt="">
+                    <span class="text-xl md:text-2xl font-semibold text-rose-400">E-commerce</span>
                 </div>
                 <button class="text-gray-500 hover:text-rose-400" onclick="toggleMenu()">
-                    <i class="ri-close-line text-2xl"></i>
+                    <i class="ri-close-line text-2xl md:text-3xl"></i>
                 </button>
             </div>
             
             <!-- Menu Items -->
-            <div class="py-4">
-                <a href="#" class="block px-4 py-2 text-gray-800 hover:bg-rose-50  hover:text-rose-600 cursor-pointer">Home</a>
-                <!-- <div class="px-4 py-2">
-                    <div class="flex items-center justify-between text-gray-800 hover:text-rose-400 cursor-pointer">
-                        <span>Categories</span>
-                        <i class="ri-arrow-right-s-line"></i>
-                    </div>
-                </div> -->
-                <a href="#" class="block px-4 py-2 text-gray-800 hover:bg-rose-50  hover:text-rose-600 cursor-pointer ">New Arrivals</a>
-                <a href="#" class="block px-4 py-2 text-gray-800 hover:bg-rose-50  hover:text-rose-600 cursor-pointer ">Best Sellers</a>
-                <a href="#" class="block px-4 py-2 text-gray-800 hover:bg-rose-50  hover:text-rose-600 cursor-pointer ">Deals</a>
-                <a href="#" class="block px-4 py-2 text-gray-800 hover:bg-rose-50  hover:text-rose-600 cursor-pointer ">Blog</a>
-                <a href="#" class="block px-4 py-2 text-gray-800 hover:bg-rose-50  hover:text-rose-600 cursor-pointer ">Contact</a>
+            <div class="py-4 md:py-6">
+                <a href="#" class="block px-4 md:px-6 py-2 md:py-3 text-gray-800 hover:bg-rose-50 hover:text-rose-600 cursor-pointer text-base md:text-lg">Home</a>
+                <a href="#" class="block px-4 md:px-6 py-2 md:py-3 text-gray-800 hover:bg-rose-50 hover:text-rose-600 cursor-pointer text-base md:text-lg">New Arrivals</a>
+                <a href="#" class="block px-4 md:px-6 py-2 md:py-3 text-gray-800 hover:bg-rose-50 hover:text-rose-600 cursor-pointer text-base md:text-lg">Best Sellers</a>
+                <a href="#" class="block px-4 md:px-6 py-2 md:py-3 text-gray-800 hover:bg-rose-50 hover:text-rose-600 cursor-pointer text-base md:text-lg">Deals</a>
+                <a href="#" class="block px-4 md:px-6 py-2 md:py-3 text-gray-800 hover:bg-rose-50 hover:text-rose-600 cursor-pointer text-base md:text-lg">Blog</a>
+                <a href="#" class="block px-4 md:px-6 py-2 md:py-3 text-gray-800 hover:bg-rose-50 hover:text-rose-600 cursor-pointer text-base md:text-lg">Contact</a>
             </div>
 
             <!-- Menu Footer -->
-            <div class="absolute bottom-0 left-0 right-0 border-t p-4">
-                <div class="flex items-center space-x-3">
-                    <i class="ri-user-line text-rose-400"></i>
+            <div class="absolute bottom-0 left-0 right-0 border-t p-4 md:p-6">
+                <div class="flex items-center space-x-3 text-base md:text-lg">
+                    <i class="ri-user-line text-rose-400 text-xl md:text-2xl"></i>
                     <span>Login / Register</span>
                 </div>
             </div>
@@ -101,7 +98,7 @@
     <!-- top bar end  -->
 
     <!-- Navbar start  -->
-    <nav class="text-rose-500 hidden md:block">
+    <nav class="text-rose-500 hidden lg:block">
         <div class="max-w-7xl mx-auto">
             <div class="flex items-center py-4 px-4">
                 <!-- Categories Dropdown -->
@@ -198,44 +195,44 @@
     <!-- Navbar end  -->
 
     <!-- Mobile Bottom Navigation -->
-    <div class="fixed bottom-0 left-0 right-0 bg-white shadow-lg md:hidden z-50">
-        <div class="flex items-center justify-around py-3">
+    <div class="fixed bottom-0 left-0 right-0 bg-white shadow-lg lg:hidden z-50">
+        <div class="flex items-center justify-around py-3 md:py-4 max-w-3xl mx-auto">
             <a href="#" class="flex flex-col items-center text-rose-400">
-                <i class="ri-home-4-line text-xl"></i>
-                <span class="text-xs mt-1">Home</span>
+                <i class="ri-home-4-line text-xl md:text-2xl"></i>
+                <span class="text-xs md:text-sm mt-1">Home</span>
             </a>
             <a href="#" class="flex flex-col items-center text-gray-400 hover:text-rose-400">
-                <i class="ri-store-2-line text-xl"></i>
-                <span class="text-xs mt-1">Shop</span>
+                <i class="ri-store-2-line text-xl md:text-2xl"></i>
+                <span class="text-xs md:text-sm mt-1">Shop</span>
             </a>
             <a href="#" class="flex flex-col items-center text-gray-400 hover:text-rose-400" onclick="toggleCategoryMenu(); return false;">
-                <i class="ri-apps-2-line text-xl"></i>
-                <span class="text-xs mt-1">Category</span>
+                <i class="ri-apps-2-line text-xl md:text-2xl"></i>
+                <span class="text-xs md:text-sm mt-1">Category</span>
             </a>
             <a href="#" class="flex flex-col items-center text-gray-400 hover:text-rose-400">
                 <div class="relative">
-                    <i class="ri-shopping-cart-2-line text-xl"></i>
-                    <span class="absolute -top-1 -right-2 bg-rose-500 text-white text-xs rounded-full w-4 h-4 flex items-center justify-center">3</span>
+                    <i class="ri-shopping-cart-2-line text-xl md:text-2xl"></i>
+                    <span class="absolute -top-1 -right-2 bg-rose-500 text-white text-xs md:text-sm rounded-full w-4 h-4 md:w-5 md:h-5 flex items-center justify-center">3</span>
                 </div>
-                <span class="text-xs mt-1">Cart</span>
+                <span class="text-xs md:text-sm mt-1">Cart</span>
             </a>
             <a href="#" class="flex flex-col items-center text-gray-400 hover:text-rose-400">
                 <div class="relative">
-                    <i class="ri-heart-line text-xl"></i>
-                    <span class="absolute -top-1 -right-2 bg-rose-500 text-white text-xs rounded-full w-4 h-4 flex items-center justify-center">3</span>
+                    <i class="ri-heart-line text-xl md:text-2xl"></i>
+                    <span class="absolute -top-1 -right-2 bg-rose-500 text-white text-xs md:text-sm rounded-full w-4 h-4 md:w-5 md:h-5 flex items-center justify-center">3</span>
                 </div>
-                <span class="text-xs mt-1">Wishlist</span>
+                <span class="text-xs md:text-sm mt-1">Wishlist</span>
             </a>
             <a href="#" class="flex flex-col items-center text-gray-400 hover:text-rose-400">
-                <i class="ri-user-line text-xl"></i>
-                <span class="text-xs mt-1">Account</span>
+                <i class="ri-user-line text-xl md:text-2xl"></i>
+                <span class="text-xs md:text-sm mt-1">Account</span>
             </a>
         </div>
     </div>
 
     <!-- Mobile Category Menu -->
-    <div id="mobileCategoryMenu" class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden md:hidden">
-        <div id="categoryContent" class="fixed top-0 left-0 bottom-0 w-80 bg-white transform -translate-x-full transition-transform duration-300 ease-in-out">
+    <div id="mobileCategoryMenu" class="fixed inset-0 bg-black/50 bg-opacity-50 z-50 hidden lg:hidden">
+        <div id="categoryContent" class="fixed top-0 left-0 bottom-0 w-80 md:w-96 bg-white transform -translate-x-full transition-transform duration-300 ease-in-out">
             <!-- Category Header -->
             <div class="flex items-center justify-between p-4 border-b border-rose-300">
                 <span class="text-xl font-semibold text-rose-400">Categories</span>
@@ -285,11 +282,61 @@
         </div>
     </div>
 
+    <!-- Main Content -->
+
+   <!-- banner slider start  -->
+    <div class="max-w-7xl mx-auto px-4 py-4">
+        <div class="swiper bannerSwiper rounded-lg overflow-hidden">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="https://placehold.co/1920x720" class="w-full h-full object-cover" alt="Banner 1">
+                </div>
+                <div class="swiper-slide">
+                    <img src="https://placehold.co/1920x720" class="w-full h-full object-cover" alt="Banner 2">
+                </div>
+                <div class="swiper-slide">
+                    <img src="https://placehold.co/1920x720" class="w-full h-full object-cover" alt="Banner 3">
+                </div>
+            </div>
+            <!-- Remove navigation elements -->
+        </div>
+    </div>
+    <!-- banner slider end  -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     <!-- Add padding to body to prevent content from being hidden behind fixed bottom nav -->
     <style>
-        @media (max-width: 768px) {
+        @media (max-width: 1024px) {
             body {
-                padding-bottom: 4rem;
+                padding-bottom: 4.5rem;
+            }
+        }
+        @media (min-width: 768px) and (max-width: 1024px) {
+            body {
+                padding-bottom: 5rem;
             }
         }
     </style>
@@ -297,19 +344,53 @@
     <!-- JS -->
     <script src="src/js/app.js"></script>
     <script>
+        function closeAllMenus() {
+            const menus = ['mobileMenu', 'mobileCategoryMenu'];
+            const contents = ['menuContent', 'categoryContent'];
+            
+            menus.forEach((menuId, index) => {
+                const menu = document.getElementById(menuId);
+                const content = document.getElementById(contents[index]);
+                
+                if (!menu.classList.contains('hidden')) {
+                    content.classList.add('-translate-x-full');
+                    setTimeout(() => {
+                        menu.classList.add('hidden');
+                    }, 300);
+                }
+            });
+        }
+
         function toggleMenu() {
             const menu = document.getElementById('mobileMenu');
             const menuContent = document.getElementById('menuContent');
             
             if (menu.classList.contains('hidden')) {
-                // Open menu
+                closeAllMenus(); // Close other menus first
                 menu.classList.remove('hidden');
                 setTimeout(() => {
                     menuContent.classList.remove('-translate-x-full');
                 }, 1);
             } else {
-                // Close menu
                 menuContent.classList.add('-translate-x-full');
+                setTimeout(() => {
+                    menu.classList.add('hidden');
+                }, 300);
+            }
+        }
+
+        function toggleCategoryMenu() {
+            const menu = document.getElementById('mobileCategoryMenu');
+            const content = document.getElementById('categoryContent');
+            
+            if (menu.classList.contains('hidden')) {
+                closeAllMenus(); // Close other menus first
+                menu.classList.remove('hidden');
+                setTimeout(() => {
+                    content.classList.remove('-translate-x-full');
+                }, 1);
+            } else {
+                content.classList.add('-translate-x-full');
                 setTimeout(() => {
                     menu.classList.add('hidden');
                 }, 300);
@@ -322,25 +403,6 @@
                 toggleMenu();
             }
         });
-
-        function toggleCategoryMenu() {
-            const menu = document.getElementById('mobileCategoryMenu');
-            const content = document.getElementById('categoryContent');
-            
-            if (menu.classList.contains('hidden')) {
-                // Open category menu
-                menu.classList.remove('hidden');
-                setTimeout(() => {
-                    content.classList.remove('-translate-x-full');
-                }, 1);
-            } else {
-                // Close category menu
-                content.classList.add('-translate-x-full');
-                setTimeout(() => {
-                    menu.classList.add('hidden');
-                }, 300);
-            }
-        }
 
         // Close category menu when clicking overlay
         document.getElementById('mobileCategoryMenu').addEventListener('click', function(e) {
@@ -378,6 +440,15 @@
                 currentIcon.style.transform = 'rotate(180deg)';
             }
         }
+
+        // Initialize Swiper
+        const swiper = new Swiper('.bannerSwiper', {
+            loop: true,
+            autoplay: {
+                delay: 3000,
+                disableOnInteraction: false,
+            }
+        });
     </script>
 </body>
 </html>
