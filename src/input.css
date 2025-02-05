@@ -1,0 +1,20 @@
+/* googlefont  */
+@import url('https://fonts.googleapis.com/css2?family=Anek+Bangla:wght@100..800&family=Hind+Siliguri:wght@300;400;500;600;700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Jost:ital,wght@0,100..900;1,100..900&display=swap');
+
+@import "tailwindcss";
+
+.font-anek {
+  font-family: 'Anek Bangla', sans-serif;
+}
+
+.font-hind {
+  font-family: 'Hind Siliguri', sans-serif;
+}
+
+.font-inter {
+  font-family: 'Inter', sans-serif;
+}
+
+.font-jost {
+  font-family: 'Jost', sans-serif;
+}
