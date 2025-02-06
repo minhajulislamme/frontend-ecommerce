@@ -669,6 +669,9 @@
   .left-0 {
     left: calc(var(--spacing) * 0);
   }
+  .left-1 {
+    left: calc(var(--spacing) * 1);
+  }
   .left-2 {
     left: calc(var(--spacing) * 2);
   }
@@ -972,9 +975,6 @@
   .h-12 {
     height: calc(var(--spacing) * 12);
   }
-  .h-16 {
-    height: calc(var(--spacing) * 16);
-  }
   .h-24 {
     height: calc(var(--spacing) * 24);
   }
@@ -995,6 +995,9 @@
   }
   .h-100 {
     height: calc(var(--spacing) * 100);
+  }
+  .h-16 {
+    height: calc(var(--spacing) * 16);
   }
   .h-1020 {
     height: calc(var(--spacing) * 1020);
