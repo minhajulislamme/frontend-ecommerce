@@ -135,19 +135,4 @@ max-width: calc(100vw / 8 - 1rem);
 max-width: calc(100vw / 10 - 1rem);
 }
 }
-  /* Add these styles */
-  @supports (backdrop-filter: blur(10px)) {
-    .sticky {
-        backdrop-filter: blur(10px);
-        background-color: rgba(255, 255, 255, 0.95);
-    }
-}
-  @media (max-width: 639px) {
-    .swiper-slide {
-        width: calc(50% - 6px) !important; /* Half width minus half of gap */
-    }
-    
-    .flashSalesSwiper .p-4 {
-        padding: 0.75rem; /* Reduce padding on mobile */
-    }
-}
+  
