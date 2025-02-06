@@ -108,11 +108,11 @@
             <div class="flex items-center py-4 px-4">
                 <!-- Categories Dropdown -->
                 <div class="relative group">
-                    <button class="flex items-center  justify-center space-x-2 w-[250px] bg-orange-400 text-white px-4 py-2 rounded-md mr-4 hover:text-white hover:bg-orange-600">
+                    <a href="#" class="flex items-center justify-center space-x-2 w-[250px] bg-orange-400 text-white px-4 py-2 rounded-md mr-4 hover:text-white hover:bg-orange-600">
                         <i class="ri-menu-2-line"></i>
                         <span>Categories</span>
                         <i class="ri-arrow-down-s-line"></i>
-                    </button>
+                    </a>
                     <div class="absolute z-10 hidden group-hover:block w-[250px] bg-white text-gray-700 shadow-lg rounded-bl-md rounded-br-md">
                         <!-- Electronics Category -->
                         <div class="relative group/sub py-2">
@@ -289,8 +289,221 @@
     </div>
 
     <!-- Main Content -->
-    
- 
+    <!-- produt details start  -->
+   
+        
+    <!-- produt details start  -->
+    <div class="max-w-7xl mx-auto px-4 py-2">
+        <!-- Breadcrumb -->
+        <div class="flex items-center space-x-2 text-sm mb-8">
+            <a href="#" class="text-gray-500 hover:text-orange-500">Home</a>
+            <span class="text-gray-500">/</span>
+            <span class="text-orange-500">Product Details</span>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            <!-- Product Images -->
+            <div class=" bg-white p-4 rounded-md shadow-sm ">
+                <!-- Main Swiper -->
+                <div class="swiper product-swiper rounded-md  mb-2">
+                    <div class="swiper-wrapper rounded-md">
+                        <div class="swiper-slide">
+                            <img src="https://placehold.co/600x600" alt="Product 1" class="w-full h-full object-contain rounded-md">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="https://placehold.co/600x600" alt="Product 2" class="w-full h-full object-contain rounded-md">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="https://placehold.co/600x600" alt="Product 3" class="w-full h-full object-contain rounded-md">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="https://placehold.co/600x600" alt="Product 4" class="w-full h-full object-contain rounded-md">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="https://placehold.co/600x600" alt="Product 5" class="w-full h-full object-contain rounded-md">
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Thumbnails -->
+                <div class="swiper product-thumbs">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide  rounded-md">
+                            <img src="https://placehold.co/600x600" alt="Thumbnail 1" class="rounded-md">
+                        </div>
+                        <div class="swiper-slide  rounded-md">
+                            <img src="https://placehold.co/600x600" alt="Thumbnail 2" class="rounded-md">
+                        </div>
+                        <div class="swiper-slide  rounded-md">
+                            <img src="https://placehold.co/600x600" alt="Thumbnail 3" class="rounded-md">
+                        </div>
+                        <div class="swiper-slide  rounded-md">
+                            <img src="https://placehold.co/600x600" alt="Thumbnail 4" class="rounded-md">
+                        </div>
+                        <div class="swiper-slide  rounded-md">
+                            <img src="https://placehold.co/600x600" alt="Thumbnail 5" class="rounded-md">
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product Info -->
+            <div class="space-y-6">
+                <!-- Title and Reviews -->
+                <div class="space-y-2">
+                    <h1 class="text-2xl font-bold text-gray-800">Premium Quality Product Name</h1>
+                    <div class="flex items-center space-x-4">
+                        <div class="flex items-center">
+                            <i class="ri-star-fill text-yellow-400"></i>
+                            <i class="ri-star-fill text-yellow-400"></i>
+                            <i class="ri-star-fill text-yellow-400"></i>
+                            <i class="ri-star-fill text-yellow-400"></i>
+                            <i class="ri-star-half-fill text-yellow-400"></i>
+                        </div>
+                        <span class="text-sm text-gray-500">(150 Reviews)</span>
+                    </div>
+                </div>
+
+                <!-- Price -->
+                <div class="flex items-center space-x-4">
+                    <span class="text-3xl font-bold text-orange-500">$299.99</span>
+                    <span class="text-lg text-gray-500 line-through">$399.99</span>
+                    <span class="bg-orange-100 text-orange-500 px-2 py-1 rounded text-sm">25% OFF</span>
+                </div>
+
+              
+
+                <!-- Color Selection -->
+                <div class="space-y-3">
+                    <span class="text-gray-600 font-medium">Color</span>
+                    <div class="flex items-center space-x-3">
+                        <div class="relative">
+                            <input type="radio" name="color" id="red" class="sr-only peer">
+                            <label for="red" class="block w-8 h-8 rounded-full bg-red-500 cursor-pointer ring-offset-2 peer-checked:ring-2 peer-checked:ring-red-500"></label>
+                        </div>
+                        <div class="relative">
+                            <input type="radio" name="color" id="blue" class="sr-only peer">
+                            <label for="blue" class="block w-8 h-8 rounded-full bg-blue-500 cursor-pointer ring-offset-2 peer-checked:ring-2 peer-checked:ring-blue-500"></label>
+                        </div>
+                        <div class="relative">
+                            <input type="radio" name="color" id="green" class="sr-only peer">
+                            <label for="green" class="block w-8 h-8 rounded-full bg-green-500 cursor-pointer ring-offset-2 peer-checked:ring-2 peer-checked:ring-green-500"></label>
+                        </div>
+                        <div class="relative">
+                            <input type="radio" name="color" id="purple" class="sr-only peer">
+                            <label for="purple" class="block w-8 h-8 rounded-full bg-purple-500 cursor-pointer ring-offset-2 peer-checked:ring-2 peer-checked:ring-purple-500"></label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Size Selection -->
+                <div class="space-y-3">
+                    <span class="text-gray-600 font-medium">Size</span>
+                    <div class="flex items-center space-x-3">
+                        <div class="relative">
+                            <input type="radio" name="size" id="XS" class="sr-only peer">
+                            <label for="XS" class="flex items-center justify-center w-10 h-10 rounded-lg border-2 border-gray-300 cursor-pointer peer-checked:border-orange-500 peer-checked:bg-orange-50 peer-checked:text-orange-500">XS</label>
+                        </div>
+                        <div class="relative">
+                            <input type="radio" name="size" id="S" class="sr-only peer">
+                            <label for="S" class="flex items-center justify-center w-10 h-10 rounded-lg border-2 border-gray-300 cursor-pointer peer-checked:border-orange-500 peer-checked:bg-orange-50 peer-checked:text-orange-500">S</label>
+                        </div>
+                        <div class="relative">
+                            <input type="radio" name="size" id="M" class="sr-only peer">
+                            <label for="M" class="flex items-center justify-center w-10 h-10 rounded-lg border-2 border-gray-300 cursor-pointer peer-checked:border-orange-500 peer-checked:bg-orange-50 peer-checked:text-orange-500">M</label>
+                        </div>
+                        <div class="relative">
+                            <input type="radio" name="size" id="L" class="sr-only peer">
+                            <label for="L" class="flex items-center justify-center w-10 h-10 rounded-lg border-2 border-gray-300 cursor-pointer peer-checked:border-orange-500 peer-checked:bg-orange-50 peer-checked:text-orange-500">L</label>
+                        </div>
+                        <div class="relative">
+                            <input type="radio" name="size" id="XL" class="sr-only peer">
+                            <label for="XL" class="flex items-center justify-center w-10 h-10 rounded-lg border-2 border-gray-300 cursor-pointer peer-checked:border-orange-500 peer-checked:bg-orange-50 peer-checked:text-orange-500">XL</label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Quantity -->
+                <div class="space-y-3">
+    <span class="text-gray-600 font-medium">Quantity</span>
+    <div class="flex items-center space-x-4">
+        <div class="flex items-center border border-orange-500 rounded-lg overflow-hidden">
+            <button onclick="decrementQuantity()" 
+                    class="w-10 h-10 bg-white hover:bg-orange-50 text-orange-500 flex items-center justify-center border-r border-orange-500 transition-colors duration-200">
+                <i class="ri-subtract-line text-xl"></i>
+            </button>
+            <input type="number" 
+                   id="quantity" 
+                   value="1" 
+                   min="1" 
+                   max="12" 
+                   class="w-10 h-10 text-center bg-white focus:outline-none text-gray-700 text-lg font-medium" 
+                   readonly>
+            <button onclick="incrementQuantity()" 
+                    class="w-10 h-10 bg-white hover:bg-orange-50 text-orange-500 flex items-center justify-center border-l border-orange-500 transition-colors duration-200">
+                <i class="ri-add-line text-xl"></i>
+            </button>
+        </div>
+        <span class="text-sm text-gray-500">
+            (<span id="stockCount" class="font-medium text-orange-500">12</span> pieces available)
+        </span>
+    </div>
+</div>
+
+                <!-- Replace the Action Buttons section with this updated version -->
+<div class="flex justify-center items-center space-x-4">
+    <a href="#" class=" flex items-center justify-center space-x-2 bg-gray-900 hover:bg-gray-800 text-white px-6 py-3 rounded-lg transition duration-200">
+        <i class="ri-shopping-bag-line"></i>
+        <span>Buy Now</span>
+    </a>
+    <div class="flex items-center space-x-2">
+        <a href="#" class="flex items-center justify-center w-12 h-12 bg-orange-500 hover:bg-orange-600 text-white rounded-lg transition duration-200">
+            <i class="ri-shopping-cart-2-line text-xl"></i>
+        </a>
+        <a href="#" class="flex items-center justify-center w-12 h-12 border-2 border-gray-300 hover:border-orange-500 hover:text-orange-500 rounded-lg transition duration-200">
+            <i class="ri-heart-line text-xl"></i>
+        </a>
+    </div>
+</div>
+
+<!-- Add this section right after the action buttons and before the Product Meta -->
+<div class="mt-6 border-t pt-6">
+    <div class="flex flex-col space-y-3">
+        <span class="text-sm font-medium text-gray-600">Accepted Payment Methods</span>
+        <div class="flex items-center space-x-4">
+            <img src="https://placehold.co/40x25" alt="Visa" class="h-8 object-contain grayscale hover:grayscale-0 transition-all duration-200">
+            <img src="https://placehold.co/40x25" alt="Mastercard" class="h-8 object-contain grayscale hover:grayscale-0 transition-all duration-200">
+            <img src="https://placehold.co/40x25" alt="American Express" class="h-8 object-contain grayscale hover:grayscale-0 transition-all duration-200">
+            <img src="https://placehold.co/40x25" alt="PayPal" class="h-8 object-contain grayscale hover:grayscale-0 transition-all duration-200">
+            <img src="https://placehold.co/40x25" alt="Apple Pay" class="h-8 object-contain grayscale hover:grayscale-0 transition-all duration-200">
+        </div>
+    </div>
+</div>
+
+
+                <!-- Product Meta -->
+                <div class="border-t pt-6 space-y-4">
+                    <div class="flex items-center space-x-4 text-sm">
+                        <span class="text-gray-500">SKU:</span>
+                        <span class="text-gray-900">SKU-12345</span>
+                    </div>
+                    <div class="flex items-center space-x-4 text-sm">
+                        <span class="text-gray-500">Category:</span>
+                        <a href="#" class="text-orange-500 hover:underline">Fashion</a>
+                    </div>
+                    <div class="flex items-center space-x-4 text-sm">
+                        <span class="text-gray-500">Share:</span>
+                        <div class="flex items-center space-x-2">
+                            <a href="#" class="hover:text-orange-500"><i class="ri-facebook-fill"></i></a>
+                            <a href="#" class="hover:text-orange-500"><i class="ri-twitter-fill"></i></a>
+                            <a href="#" class="hover:text-orange-500"><i class="ri-instagram-fill"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <!-- product details end -->
 
     <!-- main content end  -->
@@ -492,7 +705,90 @@
 
     <!-- JS -->
     <script src="src/js/app.js"></script>
-  
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Initialize thumbnail swiper
+        const thumbsSwiper = new Swiper('.product-thumbs', {
+            spaceBetween: 10,
+            slidesPerView: 4,
+            freeMode: true,
+            watchSlidesProgress: true,
+        });
+
+        // Initialize main swiper
+        const mainSwiper = new Swiper('.product-swiper', {
+            spaceBetween: 10,
+            slidesPerView: 1,
+            effect: "slide",
+            grabCursor: true,
+            thumbs: {
+                swiper: thumbsSwiper
+            },
+        });
+    });
+
+    function updateQuantityUI(value) {
+        const input = document.getElementById('quantity');
+        const stockCount = document.getElementById('stockCount');
+        const maxStock = 12;
+        
+        input.value = value;
+        stockCount.textContent = maxStock - value;
+        
+        // Update button states visually
+        const decrementBtn = input.previousElementSibling;
+        const incrementBtn = input.nextElementSibling;
+        
+        decrementBtn.classList.toggle('opacity-50', value <= 1);
+        decrementBtn.classList.toggle('cursor-not-allowed', value <= 1);
+        incrementBtn.classList.toggle('opacity-50', value >= maxStock);
+        incrementBtn.classList.toggle('cursor-not-allowed', value >= maxStock);
+    }
+
+    function incrementQuantity() {
+        const input = document.getElementById('quantity');
+        const currentValue = parseInt(input.value);
+        if (currentValue < 12) {
+            updateQuantityUI(currentValue + 1);
+        }
+    }
+
+    function decrementQuantity() {
+        const input = document.getElementById('quantity');
+        const currentValue = parseInt(input.value);
+        if (currentValue > 1) {
+            updateQuantityUI(currentValue - 1);
+        }
+    }
+
+    // Initialize on page load
+    document.addEventListener('DOMContentLoaded', () => {
+        updateQuantityUI(1);
+    });
+
+    // Prevent manual input
+    document.getElementById('quantity').addEventListener('keydown', (e) => {
+        e.preventDefault();
+    });
+</script>
+
+<!-- Update the style section -->
+<style>
+    .product-swiper {
+        width: 100%;
+        border-radius: 0.5rem;
+    }
+    .product-thumbs .swiper-slide {
+        opacity: 0.6;
+        cursor: pointer;
+    }
+    .product-thumbs .swiper-slide-thumb-active {
+        opacity: 1;
+        border: 2px solid #f97316;
+    }
+</style>
+
+
 </body>
 </html>
 </html>
