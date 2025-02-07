@@ -1472,9 +1472,10 @@
             <!-- Video Player -->
             <div class="w-full h-full rounded-lg overflow-hidden">
                 <iframe 
+                    id="youtubeVideo"
                     width="100%" 
                     height="100%" 
-                    src="https://www.youtube.com/embed/W03-9I4h_DI?si=JD90fK0XPRFacNUy"
+                    src="https://www.youtube.com/embed/9nOxjEEy6j0?si=tlfshr3H9VB6QWhQ"
                     title="Product Video"
                     frameborder="0" 
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
@@ -1755,6 +1756,9 @@
 
 function closeVideoModal() {
     const modal = document.getElementById('videoModal');
+    const iframe = document.getElementById('youtubeVideo');
+    // Reset iframe by reloading it
+    iframe.src = iframe.src;
     modal.classList.add('hidden');
 }
 
