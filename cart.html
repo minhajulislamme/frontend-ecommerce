@@ -297,37 +297,37 @@
             <!-- Cart Items -->
             <div class="flex-grow space-y-4">
                 <!-- Cart Item 1 -->
-                <div class="flex flex-col sm:flex-row items-center gap-4 bg-white p-4 rounded-lg shadow-sm">
+                <div class="flex flex-col sm:flex-row items-center gap-4 bg-white p-4 rounded-lg shadow-sm" data-product-id="1">
                     <img src="https://placehold.co/100x100" alt="Product" class="w-24 h-24 object-cover rounded-md">
                     <div class="flex-grow text-center sm:text-left">
                         <h3 class="font-semibold">Product Name</h3>
                         <p class="text-gray-500 text-sm">Size: M, Color: Blue</p>
-                        <p class="text-orange-500 font-semibold mt-1">$99.00</p>
+                        <p class="text-orange-500 font-semibold mt-1">$<span class="product-price" data-base-price="99.00">99.00</span></p>
                     </div>
                     <div class="flex items-center gap-2">
-                        <button class="w-8 h-8 border rounded-md flex items-center justify-center hover:bg-gray-100">-</button>
-                        <input type="number" value="1" class="w-12 h-8 border rounded-md text-center">
-                        <button class="w-8 h-8 border rounded-md flex items-center justify-center hover:bg-gray-100">+</button>
+                        <button class="w-8 h-8 border rounded-md flex items-center justify-center hover:bg-gray-100 decrease-qty">-</button>
+                        <input type="number" value="1" class="w-12 h-8 border rounded-md text-center product-qty" min="1" max="99">
+                        <button class="w-8 h-8 border rounded-md flex items-center justify-center hover:bg-gray-100 increase-qty">+</button>
                     </div>
-                    <button class="text-red-500 hover:text-red-600">
+                    <button class="text-red-500 hover:text-red-600 remove-item">
                         <i class="ri-delete-bin-line text-xl"></i>
                     </button>
                 </div>
     
                 <!-- Cart Item 2 -->
-                <div class="flex flex-col sm:flex-row items-center gap-4 bg-white p-4 rounded-lg shadow-sm">
+                <div class="flex flex-col sm:flex-row items-center gap-4 bg-white p-4 rounded-lg shadow-sm" data-product-id="2">
                     <img src="https://placehold.co/100x100" alt="Product" class="w-24 h-24 object-cover rounded-md">
                     <div class="flex-grow text-center sm:text-left">
                         <h3 class="font-semibold">Product Name</h3>
                         <p class="text-gray-500 text-sm">Size: L, Color: Black</p>
-                        <p class="text-orange-500 font-semibold mt-1">$129.00</p>
+                        <p class="text-orange-500 font-semibold mt-1">$<span class="product-price" data-base-price="129.00">129.00</span></p>
                     </div>
                     <div class="flex items-center gap-2">
-                        <button class="w-8 h-8 border rounded-md flex items-center justify-center hover:bg-gray-100">-</button>
-                        <input type="number" value="1" class="w-12 h-8 border rounded-md text-center">
-                        <button class="w-8 h-8 border rounded-md flex items-center justify-center hover:bg-gray-100">+</button>
+                        <button class="w-8 h-8 border rounded-md flex items-center justify-center hover:bg-gray-100 decrease-qty">-</button>
+                        <input type="number" value="1" class="w-12 h-8 border rounded-md text-center product-qty" min="1" max="99">
+                        <button class="w-8 h-8 border rounded-md flex items-center justify-center hover:bg-gray-100 increase-qty">+</button>
                     </div>
-                    <button class="text-red-500 hover:text-red-600">
+                    <button class="text-red-500 hover:text-red-600 remove-item">
                         <i class="ri-delete-bin-line text-xl"></i>
                     </button>
                 </div>
@@ -340,20 +340,20 @@
                     <div class="space-y-3 text-sm">
                         <div class="flex justify-between">
                             <span class="text-gray-600">Subtotal</span>
-                            <span class="font-semibold">$228.00</span>
+                            <span class="font-semibold">$<span id="subtotal">228.00</span></span>
                         </div>
                         <div class="flex justify-between">
                             <span class="text-gray-600">Shipping</span>
-                            <span class="font-semibold">$10.00</span>
+                            <span class="font-semibold">$<span id="shipping">10.00</span></span>
                         </div>
                         <div class="flex justify-between">
                             <span class="text-gray-600">Tax</span>
-                            <span class="font-semibold">$22.80</span>
+                            <span class="font-semibold">$<span id="tax">22.80</span></span>
                         </div>
                         <div class="border-t pt-3 mt-3">
                             <div class="flex justify-between">
                                 <span class="font-semibold">Total</span>
-                                <span class="font-semibold text-orange-500">$260.80</span>
+                                <span class="font-semibold text-orange-500">$<span id="total">260.80</span></span>
                             </div>
                         </div>
                     </div>
@@ -580,8 +580,79 @@
     <!-- JS -->
     <script src="src/js/app.js"></script>
     <script>
-      
-    </script>
+document.addEventListener('DOMContentLoaded', function() {
+    // Function to format number to 2 decimal places
+    function formatNumber(num) {
+        return Number(num).toFixed(2);
+    }
+
+    // Function to update individual item price
+    function updateItemPrice(productElement) {
+        const basePrice = parseFloat(productElement.querySelector('.product-price').dataset.basePrice);
+        const quantity = parseInt(productElement.querySelector('.product-qty').value);
+        const priceElement = productElement.querySelector('.product-price');
+        priceElement.textContent = formatNumber(basePrice * quantity);
+    }
+
+    // Function to update cart totals
+    function updateCartTotals() {
+        let subtotal = 0;
+        document.querySelectorAll('[data-product-id]').forEach(product => {
+            subtotal += parseFloat(product.querySelector('.product-price').textContent);
+        });
+
+        const shipping = 10.00; // Fixed shipping cost
+        const taxRate = 0.10; // 10% tax rate
+        const tax = subtotal * taxRate;
+        const total = subtotal + shipping + tax;
+
+        document.getElementById('subtotal').textContent = formatNumber(subtotal);
+        document.getElementById('shipping').textContent = formatNumber(shipping);
+        document.getElementById('tax').textContent = formatNumber(tax);
+        document.getElementById('total').textContent = formatNumber(total);
+    }
+
+    // Add event listeners for quantity changes
+    document.querySelectorAll('[data-product-id]').forEach(product => {
+        const qtyInput = product.querySelector('.product-qty');
+        const increaseBtn = product.querySelector('.increase-qty');
+        const decreaseBtn = product.querySelector('.decrease-qty');
+        const removeBtn = product.querySelector('.remove-item');
+
+        increaseBtn.addEventListener('click', () => {
+            const currentVal = parseInt(qtyInput.value);
+            if (currentVal < parseInt(qtyInput.max)) {
+                qtyInput.value = currentVal + 1;
+                updateItemPrice(product);
+                updateCartTotals();
+            }
+        });
+
+        decreaseBtn.addEventListener('click', () => {
+            const currentVal = parseInt(qtyInput.value);
+            if (currentVal > parseInt(qtyInput.min)) {
+                qtyInput.value = currentVal - 1;
+                updateItemPrice(product);
+                updateCartTotals();
+            }
+        });
+
+        qtyInput.addEventListener('change', () => {
+            let currentVal = parseInt(qtyInput.value);
+            if (currentVal < parseInt(qtyInput.min)) currentVal = parseInt(qtyInput.min);
+            if (currentVal > parseInt(qtyInput.max)) currentVal = parseInt(qtyInput.max);
+            qtyInput.value = currentVal;
+            updateItemPrice(product);
+            updateCartTotals();
+        });
+
+        removeBtn.addEventListener('click', () => {
+            product.remove();
+            updateCartTotals();
+        });
+    });
+});
+</script>
     <style>
       
     </style>
