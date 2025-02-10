@@ -1,96 +1,195 @@
 // ...existing code...
 
+// Updated closeAllMenus function to include cart and wishlist
 function closeAllMenus() {
-  const menus = ['mobileMenu', 'mobileCategoryMenu'];
-  const contents = ['menuContent', 'categoryContent'];
-  
-  menus.forEach((menuId, index) => {
-      const menu = document.getElementById(menuId);
-      const content = document.getElementById(contents[index]);
-      
-      if (!menu.classList.contains('hidden')) {
-          content.classList.add('-translate-x-full');
-          setTimeout(() => {
-              menu.classList.add('hidden');
-          }, 300);
-      }
-  });
+    const menus = ['mobileMenu', 'mobileCategoryMenu', 'cartSidebar', 'wishlistSidebar'];
+    const contents = ['menuContent', 'categoryContent', 'cartContent', 'wishlistContent'];
+    
+    menus.forEach((menuId, index) => {
+        const menu = document.getElementById(menuId);
+        const content = document.getElementById(contents[index]);
+        
+        if (menu && content && !menu.classList.contains('hidden')) {
+            if (contents[index] === 'cartContent' || contents[index] === 'wishlistContent') {
+                content.classList.add('translate-x-full');
+            } else {
+                content.classList.add('-translate-x-full');
+            }
+            setTimeout(() => {
+                menu.classList.add('hidden');
+            }, 300);
+        }
+    });
 }
 
+// Updated toggleMenu function
 function toggleMenu() {
-  const menu = document.getElementById('mobileMenu');
-  const menuContent = document.getElementById('menuContent');
-  
-  if (menu.classList.contains('hidden')) {
-      closeAllMenus(); // Close other menus first
-      menu.classList.remove('hidden');
-      setTimeout(() => {
-          menuContent.classList.remove('-translate-x-full');
-      }, 1);
-  } else {
-      menuContent.classList.add('-translate-x-full');
-      setTimeout(() => {
-          menu.classList.add('hidden');
-      }, 300);
-  }
+    const menu = document.getElementById('mobileMenu');
+    const menuContent = document.getElementById('menuContent');
+    
+    if (menu.classList.contains('hidden')) {
+        closeAllMenus(); // Close other menus first
+        menu.classList.remove('hidden');
+        setTimeout(() => {
+            menuContent.classList.remove('-translate-x-full');
+        }, 1);
+    } else {
+        menuContent.classList.add('-translate-x-full');
+        setTimeout(() => {
+            menu.classList.add('hidden');
+        }, 300);
+    }
 }
+
+// Updated toggleCategoryMenu function
 function toggleCategoryMenu() {
-  const menu = document.getElementById('mobileCategoryMenu');
-  const content = document.getElementById('categoryContent');
-  
-  if (menu.classList.contains('hidden')) {
-      closeAllMenus(); // Close other menus first
-      menu.classList.remove('hidden');
-      setTimeout(() => {
-          content.classList.remove('-translate-x-full');
-      }, 1);
-  } else {
-      content.classList.add('-translate-x-full');
-      setTimeout(() => {
-          menu.classList.add('hidden');
-      }, 300);
-  }
+    const menu = document.getElementById('mobileCategoryMenu');
+    const content = document.getElementById('categoryContent');
+    
+    if (menu.classList.contains('hidden')) {
+        closeAllMenus(); // Close other menus first
+        menu.classList.remove('hidden');
+        setTimeout(() => {
+            content.classList.remove('-translate-x-full');
+        }, 1);
+    } else {
+        content.classList.add('-translate-x-full');
+        setTimeout(() => {
+            menu.classList.add('hidden');
+        }, 300);
+    }
 }
-// Close menu when clicking overlay
-document.getElementById('mobileMenu').addEventListener('click', function(e) {
-  if (e.target === this) {
-      toggleMenu();
-  }
-});
-// Close category menu when clicking overlay
-document.getElementById('mobileCategoryMenu').addEventListener('click', function(e) {
-  if (e.target === this) {
-      toggleCategoryMenu();
-  }
-});
-function toggleSubcategory(id) {
-  const allSubmenus = document.querySelectorAll('[id$="-sub"]');
-  const allIcons = document.querySelectorAll('[id$="-icon"]');
-  const currentSubmenu = document.getElementById(`${id}-sub`);
-  const currentIcon = document.getElementById(`${id}-icon`);
-  
-  // Close all other submenus first
-  allSubmenus.forEach(submenu => {
-      if (submenu !== currentSubmenu) {
-          submenu.style.maxHeight = null;
-      }
-  });
-  
-  // Reset all other icons
-  allIcons.forEach(icon => {
-      if (icon !== currentIcon) {
-          icon.style.transform = 'rotate(0deg)';
-      }
-  });
-  // Toggle current submenu
-  if (currentSubmenu.style.maxHeight) {
-      currentSubmenu.style.maxHeight = null;
-      currentIcon.style.transform = 'rotate(0deg)';
-  } else {
-      currentSubmenu.style.maxHeight = currentSubmenu.scrollHeight + "px";
-      currentIcon.style.transform = 'rotate(180deg)';
-  }
+
+// Updated toggleCart function
+function toggleCart() {
+    const cartSidebar = document.getElementById('cartSidebar');
+    const cartContent = document.getElementById('cartContent');
+    
+    if (cartSidebar.classList.contains('hidden')) {
+        closeAllMenus(); // Close other menus first
+        cartSidebar.classList.remove('hidden');
+        setTimeout(() => {
+            cartContent.classList.remove('translate-x-full');
+        }, 1);
+    } else {
+        cartContent.classList.add('translate-x-full');
+        setTimeout(() => {
+            cartSidebar.classList.add('hidden');
+        }, 300);
+    }
 }
+
+// Wishlist Toggle Function
+function toggleWishlist() {
+    const wishlistSidebar = document.getElementById('wishlistSidebar');
+    const wishlistContent = document.getElementById('wishlistContent');
+    
+    if (wishlistSidebar.classList.contains('hidden')) {
+        closeAllMenus(); // Close other menus first
+        wishlistSidebar.classList.remove('hidden');
+        setTimeout(() => {
+            wishlistContent.classList.remove('translate-x-full');
+        }, 1);
+    } else {
+        wishlistContent.classList.add('translate-x-full');
+        setTimeout(() => {
+            wishlistSidebar.classList.add('hidden');
+        }, 300);
+    }
+}
+
+// Function to move item from wishlist to cart
+function moveToCart(itemId) {
+    // Add to cart logic here
+    const item = document.getElementById(`wishlist-item-${itemId}`);
+    if (item) {
+        // You can implement the actual cart addition logic here
+        alert('Item added to cart!');
+        removeFromWishlist(itemId);
+    }
+}
+
+// Function to remove item from wishlist
+function removeFromWishlist(itemId) {
+    const item = document.getElementById(`wishlist-item-${itemId}`);
+    if (item) {
+        item.remove();
+        // Update wishlist count
+        const wishlistItems = document.querySelectorAll('.wishlist-item').length;
+        document.querySelectorAll('.wishlist-count').forEach(counter => {
+            counter.textContent = wishlistItems;
+        });
+    }
+}
+
+// Close menus when clicking overlay
+document.addEventListener('DOMContentLoaded', function() {
+    const overlays = ['mobileMenu', 'mobileCategoryMenu', 'cartSidebar'];
+    
+    overlays.forEach(overlayId => {
+        const overlay = document.getElementById(overlayId);
+        if (overlay) {
+            overlay.addEventListener('click', function(e) {
+                if (e.target === this) {
+                    switch(overlayId) {
+                        case 'mobileMenu':
+                            toggleMenu();
+                            break;
+                        case 'mobileCategoryMenu':
+                            toggleCategoryMenu();
+                            break;
+                        case 'cartSidebar':
+                            toggleCart();
+                            break;
+                    }
+                }
+            });
+        }
+    });
+
+    // Initialize click handlers for menu buttons
+    const menuButton = document.querySelector('[onclick="toggleMenu()"]');
+    if (menuButton) {
+        menuButton.onclick = function(e) {
+            e.preventDefault();
+            toggleMenu();
+        };
+    }
+
+    const categoryButton = document.querySelector('[onclick="toggleCategoryMenu()"]');
+    if (categoryButton) {
+        categoryButton.onclick = function(e) {
+            e.preventDefault();
+            toggleCategoryMenu();
+        };
+    }
+
+    // Update cart button handlers
+    const cartButtons = document.querySelectorAll('[onclick="toggleCart()"]');
+    cartButtons.forEach(button => {
+        button.onclick = function(e) {
+            e.preventDefault();
+            toggleCart();
+        };
+    });
+
+    // Add wishlist button handlers
+    const wishlistButtons = document.querySelectorAll('[onclick="toggleWishlist()"]');
+    wishlistButtons.forEach(button => {
+        button.onclick = function(e) {
+            e.preventDefault();
+            toggleWishlist();
+        };
+    });
+
+    // Close menu on ESC key
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') {
+            closeAllMenus();
+        }
+    });
+});
+
 // Initialize Swiper
 const swiper = new Swiper('.bannerSwiper', {
   loop: true,
@@ -232,5 +331,71 @@ document.querySelectorAll('a[onclick]').forEach(anchor => {
       e.preventDefault();
   });
 });
+
+// Cart Management Functions
+function updateCartItem(itemId, quantity) {
+    const item = document.getElementById(`cart-item-${itemId}`);
+    if (!item) return;
+
+    const quantityElement = item.querySelector('.quantity-value');
+    const priceElement = item.querySelector('.item-price');
+    const basePrice = parseFloat(item.dataset.basePrice);
+    
+    // Update quantity
+    quantityElement.textContent = quantity;
+    
+    // Update item total price
+    const totalPrice = (basePrice * quantity).toFixed(2);
+    priceElement.textContent = `$${totalPrice}`;
+
+    // Update cart subtotal
+    updateCartSubtotal();
+}
+
+function incrementQuantity(itemId) {
+    const item = document.getElementById(`cart-item-${itemId}`);
+    const quantityElement = item.querySelector('.quantity-value');
+    const currentQuantity = parseInt(quantityElement.textContent);
+    const newQuantity = currentQuantity + 1;
+    
+    updateCartItem(itemId, newQuantity);
+}
+
+function decrementQuantity(itemId) {
+    const item = document.getElementById(`cart-item-${itemId}`);
+    const quantityElement = item.querySelector('.quantity-value');
+    const currentQuantity = parseInt(quantityElement.textContent);
+    if (currentQuantity > 1) {
+        const newQuantity = currentQuantity - 1;
+        updateCartItem(itemId, newQuantity);
+    }
+}
+
+function removeCartItem(itemId) {
+    const item = document.getElementById(`cart-item-${itemId}`);
+    item.remove();
+    updateCartSubtotal();
+    
+    // Update cart count
+    const cartItems = document.querySelectorAll('.cart-item').length;
+    document.querySelectorAll('.cart-count').forEach(counter => {
+        counter.textContent = cartItems;
+    });
+}
+
+function updateCartSubtotal() {
+    const cartItems = document.querySelectorAll('.cart-item');
+    let subtotal = 0;
+
+    cartItems.forEach(item => {
+        const price = parseFloat(item.querySelector('.item-price').textContent.replace('$', ''));
+        subtotal += price;
+    });
+
+    // Update subtotal
+    document.getElementById('cart-subtotal').textContent = `$${subtotal.toFixed(2)}`;
+    // Update total (same as subtotal since shipping is free)
+    document.getElementById('cart-total').textContent = `$${subtotal.toFixed(2)}`;
+}
 
 // ...existing code...

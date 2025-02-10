@@ -28,13 +28,13 @@
             </div>
             <div class="flex-none space-x-1">
                 <a href="#" class="text-1xl text-orange-400 p-2 rounded-sm hover:bg-orange-50"><i class="ri-user-line"></i></a>
-                <a href="#" class="text-1xl text-orange-400 p-2 rounded-sm hover:bg-orange-50 relative">
+                <a href="#" class="text-1xl text-orange-400 p-2 rounded-sm hover:bg-orange-50 relative" onclick="toggleCart(); return false;">
                     <i class="ri-shopping-cart-line"></i>
                     <span class="absolute -top-1 -right-1 bg-orange-500 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center">3</span>
                 </a>
-                <a href="#" class="text-1xl text-orange-400 p-2 rounded-sm hover:bg-orange-50 relative">
+                <a href="#" class="text-1xl text-orange-400 p-2 rounded-sm hover:bg-orange-50 relative" onclick="toggleWishlist(); return false;">
                     <i class="ri-heart-line"></i>
-                    <span class="absolute -top-1 -right-1 bg-orange-500 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center">3</span>
+                    <span class="absolute -top-1 -right-1 bg-orange-500 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center wishlist-count">2</span>
                 </a>
             </div>
         </div>
@@ -61,7 +61,7 @@
             <img src="https://placehold.co/32x32" class="w-8 h-8 md:w-10 md:h-10 rounded-md" alt="">
             <a href="#" class="text-xl md:text-2xl text-orange-400 font-semibold">Shop Ever</a>
         </div>
-        <a href="#" class="text-gray-500 hover:text-orange-400" onclick="toggleMenu()">
+        <a href="#" class="text-gray-500 hover:text-orange-400" onclick="toggleMenu(); return false;">
             <i class="ri-menu-line text-2xl md:text-3xl"></i>
         </a>
     </div>
@@ -215,17 +215,17 @@
                 <i class="ri-apps-2-line text-xl md:text-2xl"></i>
                 <span class="text-xs md:text-sm mt-1">Category</span>
             </a>
-            <a href="#" class="flex flex-col items-center text-gray-400 hover:text-orange-400">
+            <a href="#" class="flex flex-col items-center text-gray-400 hover:text-orange-400" onclick="toggleCart(); return false;">
                 <div class="relative">
                     <i class="ri-shopping-cart-2-line text-xl md:text-2xl"></i>
                     <span class="absolute -top-1 -right-2 bg-orange-500 text-white text-xs md:text-sm rounded-full w-4 h-4 md:w-5 md:h-5 flex items-center justify-center">3</span>
                 </div>
                 <span class="text-xs md:text-sm mt-1">Cart</span>
             </a>
-            <a href="#" class="flex flex-col items-center text-gray-400 hover:text-orange-400">
+            <a href="#" class="flex flex-col items-center text-gray-400 hover:text-orange-400" onclick="toggleWishlist(); return false;">
                 <div class="relative">
                     <i class="ri-heart-line text-xl md:text-2xl"></i>
-                    <span class="absolute -top-1 -right-2 bg-orange-500 text-white text-xs md:text-sm rounded-full w-4 h-4 md:w-5 md:h-5 flex items-center justify-center">3</span>
+                    <span class="absolute -top-1 -right-2 bg-orange-500 text-white text-xs md:text-sm rounded-full w-4 h-4 md:w-5 md:h-5 flex items-center justify-center wishlist-count">2</span>
                 </div>
                 <span class="text-xs md:text-sm mt-1">Wishlist</span>
             </a>
@@ -289,125 +289,47 @@
     </div>
 
     <!-- Main Content -->
-  <!-- about us section  -->
-<div class="max-w-7xl mx-auto px-4 py-12">
-    <!-- Company Overview -->
-    <div class="text-center mb-12">
-        <h1 class="text-3xl lg:text-4xl font-bold text-gray-800 mb-4">About Shop Ever</h1>
-        <p class="text-gray-600 max-w-2xl mx-auto">We're more than just an e-commerce platform. We're a community dedicated to bringing you the best products with exceptional service.</p>
-    </div>
 
-    <!-- Mission and Vision -->
-    <div class="grid md:grid-cols-2 gap-8 mb-16">
-        <div class="bg-white p-8 rounded-lg shadow-sm border border-gray-100">
-            <div class="w-16 h-16 bg-orange-100 rounded-lg flex items-center justify-center mb-6">
-                <i class="ri-focus-3-line text-3xl text-orange-500"></i>
+   <!-- banner slider start  -->
+    <div class="max-w-7xl mx-auto px-4 py-2">
+        <div class="swiper bannerSwiper rounded-lg overflow-hidden h-[200px] sm:h-[300px] md:h-[400px] lg:h-[500px]">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="https://placehold.co/1920x720" class="w-full h-full object-cover object-center" alt="Banner 1">
+                </div>
+                <div class="swiper-slide">
+                    <img src="https://placehold.co/1920x720" class="w-full h-full object-cover object-center" alt="Banner 2">
+                </div>
+                <div class="swiper-slide">
+                    <img src="https://placehold.co/1920x720" class="w-full h-full object-cover object-center" alt="Banner 3">
+                </div>
             </div>
-            <h2 class="text-2xl font-semibold text-gray-800 mb-4">Our Mission</h2>
-            <p class="text-gray-600">To provide our customers with the best shopping experience through innovative technology, extensive product selection, and exceptional customer service.</p>
-        </div>
-        <div class="bg-white p-8 rounded-lg shadow-sm border border-gray-100">
-            <div class="w-16 h-16 bg-orange-100 rounded-lg flex items-center justify-center mb-6">
-                <i class="ri-eye-line text-3xl text-orange-500"></i>
-            </div>
-            <h2 class="text-2xl font-semibold text-gray-800 mb-4">Our Vision</h2>
-            <p class="text-gray-600">To become the world's most customer-centric e-commerce platform, where customers can find and discover anything they might want to buy online.</p>
+            <!-- Remove navigation elements -->
         </div>
     </div>
+    <!-- banner slider end  -->
 
-    <!-- Stats -->
-    <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16">
-        <div class="text-center">
-            <div class="text-4xl font-bold text-orange-500 mb-2">10K+</div>
-            <p class="text-gray-600">Products</p>
-        </div>
-        <div class="text-center">
-            <div class="text-4xl font-bold text-orange-500 mb-2">50K+</div>
-            <p class="text-gray-600">Customers</p>
-        </div>
-        <div class="text-center">
-            <div class="text-4xl font-bold text-orange-500 mb-2">100+</div>
-            <p class="text-gray-600">Brands</p>
-        </div>
-        <div class="text-center">
-            <div class="text-4xl font-bold text-orange-500 mb-2">15+</div>
-            <p class="text-gray-600">Countries</p>
-        </div>
-    </div>
 
-    <!-- Team Section -->
-    <div class="mb-16">
-        <h2 class="text-2xl lg:text-3xl font-bold text-gray-800 text-center mb-8">Meet Our Team</h2>
-        <div class="grid md:grid-cols-3 lg:grid-cols-4 gap-6">
-            <!-- Team Member 1 -->
-            <div class="text-center">
-                <div class="w-32 h-32 mx-auto mb-4">
-                    <img src="https://placehold.co/128x128" alt="Team Member" class="w-full h-full object-cover rounded-full">
-                </div>
-                <h3 class="text-lg font-semibold text-gray-800">John Doe</h3>
-                <p class="text-gray-600">CEO & Founder</p>
-            </div>
-            <!-- Team Member 2 -->
-            <div class="text-center">
-                <div class="w-32 h-32 mx-auto mb-4">
-                    <img src="https://placehold.co/128x128" alt="Team Member" class="w-full h-full object-cover rounded-full">
-                </div>
-                <h3 class="text-lg font-semibold text-gray-800">Jane Smith</h3>
-                <p class="text-gray-600">COO</p>
-            </div>
-            <!-- Team Member 3 -->
-            <div class="text-center">
-                <div class="w-32 h-32 mx-auto mb-4">
-                    <img src="https://placehold.co/128x128" alt="Team Member" class="w-full h-full object-cover rounded-full">
-                </div>
-                <h3 class="text-lg font-semibold text-gray-800">Mike Johnson</h3>
-                <p class="text-gray-600">CTO</p>
-            </div>
-            <!-- Team Member 4 -->
-            <div class="text-center">
-                <div class="w-32 h-32 mx-auto mb-4">
-                    <img src="https://placehold.co/128x128" alt="Team Member" class="w-full h-full object-cover rounded-full">
-                </div>
-                <h3 class="text-lg font-semibold text-gray-800">Sarah Wilson</h3>
-                <p class="text-gray-600">Head of Design</p>
-            </div>
-        </div>
-    </div>
+    <!-- flash selas end  -->
 
-    <!-- Why Choose Us -->
-    <div>
-        <h2 class="text-2xl lg:text-3xl font-bold text-gray-800 text-center mb-8">Why Choose Us</h2>
-        <div class="grid md:grid-cols-3 gap-6">
-            <!-- Feature 1 -->
-            <div class="bg-white p-6 rounded-lg shadow-sm border border-gray-100">
-                <div class="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center mb-4">
-                    <i class="ri-shield-check-line text-2xl text-orange-500"></i>
-                </div>
-                <h3 class="text-xl font-semibold text-gray-800 mb-2">Quality Assurance</h3>
-                <p class="text-gray-600">We ensure that all products meet our high-quality standards before they reach you.</p>
-            </div>
-            <!-- Feature 2 -->
-            <div class="bg-white p-6 rounded-lg shadow-sm border border-gray-100">
-                <div class="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center mb-4">
-                    <i class="ri-customer-service-2-line text-2xl text-orange-500"></i>
-                </div>
-                <h3 class="text-xl font-semibold text-gray-800 mb-2">24/7 Support</h3>
-                <p class="text-gray-600">Our customer service team is always ready to help you with any questions or concerns.</p>
-            </div>
-            <!-- Feature 3 -->
-            <div class="bg-white p-6 rounded-lg shadow-sm border border-gray-100">
-                <div class="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center mb-4">
-                    <i class="ri-secure-payment-line text-2xl text-orange-500"></i>
-                </div>
-                <h3 class="text-xl font-semibold text-gray-800 mb-2">Secure Payments</h3>
-                <p class="text-gray-600">Your transactions are protected with industry-leading security measures.</p>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- Main Content end  -->
+    <!-- Update product category section -->
 
-      
+
+    <!-- product start  -->
+
+    <!-- product end  -->
+
+    <!-- Add more product items with the same pattern -->
+    <!-- promot banner start  -->
+
+    <!-- promot banner end  -->
+
+       <!-- product start  -->
+    
+    <!-- product end  -->
+    <!-- show more product  start  -->
+   
+    <!-- show more product  end  -->
     <!-- Scroll to top button -->
     <a href="#" id="scrollToTop" class="fixed bottom-20 right-4 lg:bottom-8 lg:right-8 bg-orange-500 text-white w-10 h-10 rounded-full shadow-lg flex items-center justify-center transform scale-0 transition-all duration-300 hover:bg-orange-600 z-50">
         <i class="ri-arrow-up-line text-xl"></i>
@@ -451,6 +373,171 @@
         </div>
     </div>
     <!-- delivery trust secure payment end -->
+
+    <!-- Cart Sidebar -->
+    <div id="cartSidebar" class="fixed inset-0 bg-black/50 bg-opacity-50 z-50 hidden">
+        <div id="cartContent" class="fixed top-0 right-0 bottom-0 w-80 md:w-96 bg-white transform translate-x-full transition-transform duration-300 ease-in-out">
+            <!-- Cart Header -->
+            <div class="flex items-center justify-between p-4 border-b">
+                <div class="flex items-center space-x-3">
+                    <i class="ri-shopping-cart-2-line text-2xl text-orange-400"></i>
+                    <span class="text-xl font-semibold">Shopping Cart (3)</span>
+                </div>
+                <button class="text-gray-500 hover:text-orange-400" onclick="toggleCart()">
+                    <i class="ri-close-line text-2xl"></i>
+                </button>
+            </div>
+
+            <!-- Cart Items -->
+            <div class="overflow-y-auto h-[calc(100%-180px)] p-4">
+    <!-- Cart Item -->
+    <div id="cart-item-1" class="cart-item flex items-center space-x-4 border-b pb-4 mb-4" data-base-price="99.00">
+        <img src="https://placehold.co/80x80" class="w-20 h-20 object-cover rounded-md" alt="Product">
+        <div class="flex-1">
+            <h3 class="font-semibold text-gray-800">Product Name</h3>
+            <p class="text-gray-600 text-sm">Size: M, Color: Blue</p>
+            <div class="flex items-center space-x-2 mt-2">
+                <button class="w-6 h-6 bg-gray-100 rounded-md flex items-center justify-center hover:bg-gray-200" 
+                        onclick="decrementQuantity(1)">-</button>
+                <span class="text-gray-800 quantity-value">1</span>
+                <button class="w-6 h-6 bg-gray-100 rounded-md flex items-center justify-center hover:bg-gray-200" 
+                        onclick="incrementQuantity(1)">+</button>
+            </div>
+        </div>
+        <div class="text-right">
+            <p class="font-semibold text-orange-400 item-price">$99.00</p>
+            <button class="text-gray-400 hover:text-red-500 mt-2" onclick="removeCartItem(1)">
+                <i class="ri-delete-bin-line"></i>
+            </button>
+        </div>
+    </div>
+
+    <!-- Cart Item -->
+    <div id="cart-item-2" class="cart-item flex items-center space-x-4 border-b pb-4 mb-4" data-base-price="159.00">
+        <img src="https://placehold.co/80x80" class="w-20 h-20 object-cover rounded-md" alt="Product">
+        <div class="flex-1">
+            <h3 class="font-semibold text-gray-800">Product Name</h3>
+            <p class="text-gray-600 text-sm">Size: L, Color: Red</p>
+            <div class="flex items-center space-x-2 mt-2">
+                <button class="w-6 h-6 bg-gray-100 rounded-md flex items-center justify-center hover:bg-gray-200" 
+                        onclick="decrementQuantity(2)">-</button>
+                <span class="text-gray-800 quantity-value">1</span>
+                <button class="w-6 h-6 bg-gray-100 rounded-md flex items-center justify-center hover:bg-gray-200" 
+                        onclick="incrementQuantity(2)">+</button>
+            </div>
+        </div>
+        <div class="text-right">
+            <p class="font-semibold text-orange-400 item-price">$159.00</p>
+            <button class="text-gray-400 hover:text-red-500 mt-2" onclick="removeCartItem(2)">
+                <i class="ri-delete-bin-line"></i>
+            </button>
+        </div>
+    </div>
+</div>
+
+<!-- Replace the Cart Footer section with: -->
+<div class="absolute bottom-0 left-0 right-0 bg-white border-t p-4">
+    <!-- Cart Summary -->
+    <div class="space-y-3 mb-4">
+        <div class="flex justify-between text-sm">
+            <span class="text-gray-500">Subtotal:</span>
+            <span class="text-gray-800" id="cart-subtotal">$258.00</span>
+        </div>
+        <div class="flex justify-between text-sm">
+            <span class="text-gray-500">Shipping:</span>
+            <span class="text-gray-800">Free</span>
+        </div>
+        <div class="flex justify-between pt-2 border-t">
+            <span class="font-semibold text-gray-800">Total:</span>
+            <div class="text-right">
+                <span class="font-semibold text-gray-800" id="cart-total">$258.00</span>
+                <p class="text-xs text-gray-500">Including VAT</p>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Action Buttons -->
+    <div class="space-y-2">
+        <a href="/checkout" 
+           class="block w-full bg-orange-500 text-white text-center px-4 py-2.5 rounded-md hover:bg-orange-600 transition-colors font-medium">
+            Proceed to Checkout
+        </a>
+        <a href="/cart" 
+           class="block w-full bg-gray-100 text-gray-800 text-center px-4 py-2.5 rounded-md hover:bg-gray-200 transition-colors font-medium">
+            View Cart
+        </a>
+    </div>
+</div>
+
+        </div>
+    </div>
+
+    <!-- Wishlist Sidebar -->
+    <div id="wishlistSidebar" class="fixed inset-0 bg-black/50 bg-opacity-50 z-50 hidden">
+        <div id="wishlistContent" class="fixed top-0 right-0 bottom-0 w-80 md:w-96 bg-white transform translate-x-full transition-transform duration-300 ease-in-out">
+            <!-- Wishlist Header -->
+            <div class="flex items-center justify-between p-4 border-b">
+                <div class="flex items-center space-x-3">
+                    <i class="ri-heart-line text-2xl text-orange-400"></i>
+                    <span class="text-xl font-semibold">Wishlist (2)</span>
+                </div>
+                <button class="text-gray-500 hover:text-orange-400" onclick="toggleWishlist()">
+                    <i class="ri-close-line text-2xl"></i>
+                </button>
+            </div>
+
+            <!-- Wishlist Items -->
+            <div class="overflow-y-auto h-[calc(100%-180px)] p-4">
+                <!-- Wishlist Item -->
+                <div id="wishlist-item-1" class="wishlist-item flex items-center space-x-4 border-b pb-4 mb-4">
+                    <img src="https://placehold.co/80x80" class="w-20 h-20 object-cover rounded-md" alt="Product">
+                    <div class="flex-1">
+                        <h3 class="font-semibold text-gray-800">Product Name</h3>
+                        <p class="text-orange-500 font-medium mt-1">$99.00</p>
+                        <div class="flex items-center space-x-2 mt-2">
+                            <button onclick="moveToCart(1)" 
+                                    class="text-xs bg-orange-500 text-white px-3 py-1 rounded-md hover:bg-orange-600 transition-colors">
+                                Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                    <div class="text-right">
+                        <button class="text-gray-400 hover:text-red-500" onclick="removeFromWishlist(1)">
+                            <i class="ri-delete-bin-line text-xl"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Wishlist Item -->
+                <div id="wishlist-item-2" class="wishlist-item flex items-center space-x-4 border-b pb-4 mb-4">
+                    <img src="https://placehold.co/80x80" class="w-20 h-20 object-cover rounded-md" alt="Product">
+                    <div class="flex-1">
+                        <h3 class="font-semibold text-gray-800">Product Name</h3>
+                        <p class="text-orange-500 font-medium mt-1">$159.00</p>
+                        <div class="flex items-center space-x-2 mt-2">
+                            <button onclick="moveToCart(2)" 
+                                    class="text-xs bg-orange-500 text-white px-3 py-1 rounded-md hover:bg-orange-600 transition-colors">
+                                Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                    <div class="text-right">
+                        <button class="text-gray-400 hover:text-red-500" onclick="removeFromWishlist(2)">
+                            <i class="ri-delete-bin-line text-xl"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Wishlist Footer -->
+            <div class="absolute bottom-0 left-0 right-0 bg-white border-t p-4">
+                <button onclick="moveAllToCart()" 
+                        class="w-full bg-orange-500 text-white text-center px-4 py-2.5 rounded-md hover:bg-orange-600 transition-colors font-medium">
+                    Add All to Cart
+                </button>
+            </div>
+        </div>
+    </div>
 
     <!-- Floating Action Buttons -->
     <div class="fixed left-4 bottom-20 lg:bottom-8 z-50">
