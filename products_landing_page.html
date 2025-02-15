@@ -1,0 +1,892 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop Ever Store</title>
+    <!-- rimix icon cdn  -->
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet"/>
+    <!-- CSS -->
+    <link rel="stylesheet" href="src/css/style.css">
+    <!-- Add Swiper CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+</head>
+<body class="bg-gray-100 font-jost">
+  
+    <!-- Main Content -->
+    <div class="max-w-7xl mx-auto">
+
+        <!-- add logo here  -->
+        <!-- image slider start  -->
+        <div class="flex flex-col md:flex-row gap-6 p-4">
+            <!-- Product Images -->
+            <div class="w-full md:w-1/2">
+                <!-- Main Swiper -->
+                <div class="swiper mainSwiper mb-3">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img src="https://placehold.co/600x600" class="w-full h-auto rounded-lg" alt="Product 1">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="https://placehold.co/600x600" class="w-full h-auto rounded-lg" alt="Product 2">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="https://placehold.co/600x600" class="w-full h-auto rounded-lg" alt="Product 3">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="https://placehold.co/600x600" class="w-full h-auto rounded-lg" alt="Product 4">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Thumbnail Swiper -->
+                <div class="swiper thumbSwiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide cursor-pointer">
+                            <img src="https://placehold.co/150x150" class="w-full h-auto rounded-lg" alt="Thumbnail 1">
+                        </div>
+                        <div class="swiper-slide cursor-pointer">
+                            <img src="https://placehold.co/150x150" class="w-full h-auto rounded-lg" alt="Thumbnail 2">
+                        </div>
+                        <div class="swiper-slide cursor-pointer">
+                            <img src="https://placehold.co/150x150" class="w-full h-auto rounded-lg" alt="Thumbnail 3">
+                        </div>
+                        <div class="swiper-slide cursor-pointer">
+                            <img src="https://placehold.co/150x150" class="w-full h-auto rounded-lg" alt="Thumbnail 4">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product Info -->
+            <div class="w-full md:w-1/2">
+                <h1 class="text-2xl md:text-3xl font-semibold text-gray-800 mb-4">Premium Product Name</h1>
+                
+              
+                <p class="text-gray-600 mb-6">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                </p>
+                <!-- Price and Purchase Section -->
+                <div class="bg-gray-50 p-6 rounded-lg mb-6">
+                    <div class="flex items-center justify-center mb-4">
+                        <div class="text-center">
+                            <span class="text-3xl font-bold text-orange-600">$299.99</span>
+                            <span class="text-lg text-gray-500 line-through ml-2">$399.99</span>
+                        </div>
+                    </div>
+                    <div class="flex justify-center">
+                        <button class="w-1/2 bg-orange-500 text-white px-6 py-3 rounded-md hover:bg-orange-600 transition-colors">
+                            Buy Now
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product Information Cards -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+                    <!-- Shipping Info -->
+                    <div class="bg-white p-4 rounded-lg border border-gray-200">
+                        <div class="flex items-start space-x-3">
+                            <i class="ri-truck-line text-orange-500 text-xl mt-1"></i>
+                            <div>
+                                <h4 class="font-semibold text-gray-800 mb-1">Free Shipping</h4>
+                                <p class="text-sm text-gray-600">Free standard shipping on orders over $100</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Stock Info -->
+                    <div class="bg-white p-4 rounded-lg border border-gray-200">
+                        <div class="flex items-start space-x-3">
+                            <i class="ri-store-2-line text-orange-500 text-xl mt-1"></i>
+                            <div>
+                                <h4 class="font-semibold text-gray-800 mb-1">In Stock</h4>
+                                <p class="text-sm text-gray-600">Available at warehouse</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Return Policy -->
+                    <div class="bg-white p-4 rounded-lg border border-gray-200">
+                        <div class="flex items-start space-x-3">
+                            <i class="ri-refresh-line text-orange-500 text-xl mt-1"></i>
+                            <div>
+                                <h4 class="font-semibold text-gray-800 mb-1">Easy Returns</h4>
+                                <p class="text-sm text-gray-600">30-day return policy</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Warranty -->
+                    <div class="bg-white p-4 rounded-lg border border-gray-200">
+                        <div class="flex items-start space-x-3">
+                            <i class="ri-shield-check-line text-orange-500 text-xl mt-1"></i>
+                            <div>
+                                <h4 class="font-semibold text-gray-800 mb-1">Warranty</h4>
+                                <p class="text-sm text-gray-600">1 year manufacturer warranty</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product Details Tabs -->
+                <div class="border rounded-lg mt-8">
+                    <!-- Tab Headers -->
+                    <div class="flex border-b">
+                        <button onclick="switchTab('details')" id="detailsTab" 
+                            class="flex-1 py-3 px-4 text-center font-semibold text-gray-600 hover:text-orange-500 border-b-2 border-transparent transition-colors">
+                            Details
+                        </button>
+                        <button onclick="switchTab('specs')" id="specsTab" 
+                            class="flex-1 py-3 px-4 text-center font-semibold text-gray-600 hover:text-orange-500 border-b-2 border-transparent transition-colors">
+                            Specifications
+                        </button>
+                    </div>
+
+                    <!-- Tab Contents -->
+                    <div class="p-4">
+                        <!-- Details Tab -->
+                        <div id="detailsContent" class="tab-content">
+                            <p class="text-gray-600">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                            </p>
+                            <ul class="list-disc list-inside mt-4 space-y-2 text-gray-600">
+                                <li>High-quality materials</li>
+                                <li>Durable construction</li>
+                                <li>Premium finish</li>
+                                <li>1 year warranty</li>
+                            </ul>
+                        </div>
+
+                        <!-- Specifications Tab -->
+                        <div id="specsContent" class="tab-content hidden">
+                            <div class="space-y-4">
+                                <div class="grid grid-cols-2 gap-4">
+                                    <div class="bg-gray-50 p-3 rounded">
+                                        <span class="text-gray-500">Brand</span>
+                                        <p class="font-semibold mt-1">Premium Brand</p>
+                                    </div>
+                                    <div class="bg-gray-50 p-3 rounded">
+                                        <span class="text-gray-500">Model</span>
+                                        <p class="font-semibold mt-1">2024 Edition</p>
+                                    </div>
+                                    <div class="bg-gray-50 p-3 rounded">
+                                        <span class="text-gray-500">Material</span>
+                                        <p class="font-semibold mt-1">Premium Quality</p>
+                                    </div>
+                                    <div class="bg-gray-50 p-3 rounded">
+                                        <span class="text-gray-500">Material</span>
+                                        <p class="font-semibold mt-1">Premium Quality</p>
+                                    </div>
+                                    <div class="bg-gray-50 p-3 rounded">
+                                        <span class="text-gray-500">Material</span>
+                                        <p class="font-semibold mt-1">Premium Quality</p>
+                                    </div>
+                                    <div class="bg-gray-50 p-3 rounded">
+                                        <span class="text-gray-500">Material</span>
+                                        <p class="font-semibold mt-1">Premium Quality</p>
+                                    </div>
+                                    <div class="bg-gray-50 p-3 rounded">
+                                        <span class="text-gray-500">Material</span>
+                                        <p class="font-semibold mt-1">Premium Quality</p>
+                                    </div>
+                                    <div class="bg-gray-50 p-3 rounded">
+                                        <span class="text-gray-500">Material</span>
+                                        <p class="font-semibold mt-1">Premium Quality</p>
+                                    </div>
+                                    
+                                    <div class="bg-gray-50 p-3 rounded">
+                                        <span class="text-gray-500">Weight</span>
+                                        <p class="font-semibold mt-1">1.5 kg</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                       
+                    </div>
+                </div>
+                <!-- End Product Details -->
+            </div>
+        </div>
+        
+       
+        <!-- Product Video Section -->
+        <div class="bg-white rounded-lg shadow-sm p-4 md:p-8 mt-8">
+            <div class="max-w-4xl mx-auto">
+                <!-- Section Header -->
+                <div class="text-center mb-8">
+                    <h2 class="text-2xl md:text-3xl font-semibold text-gray-800 mb-2">Product Overview</h2>
+                    <p class="text-gray-600">Watch our detailed product demonstration video</p>
+                </div>
+
+                <!-- Video Container -->
+                <div class="relative pb-[56.25%] h-0 rounded-lg overflow-hidden shadow-lg mb-8">
+                    <iframe 
+                        class="absolute top-0 left-0 w-full h-full"
+                        src="https://www.youtube.com/embed/ax1csKKQnns?si=pTJ4W_aJw5Wrwsc-"
+                        title="Product Overview"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen>
+                    </iframe>
+                </div>
+
+                <!-- Video Features Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
+                    <!-- Feature 1 -->
+                    <div class="text-center">
+                        <div class="w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="ri-award-line text-2xl text-orange-500"></i>
+                        </div>
+                        <h3 class="font-semibold text-gray-800 mb-2">Premium Quality</h3>
+                        <p class="text-gray-600 text-sm">Crafted with the finest materials for lasting durability</p>
+                    </div>
+
+                    <!-- Feature 2 -->
+                    <div class="text-center">
+                        <div class="w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="ri-tools-line text-2xl text-orange-500"></i>
+                        </div>
+                        <h3 class="font-semibold text-gray-800 mb-2">Easy to Use</h3>
+                        <p class="text-gray-600 text-sm">Intuitive design for seamless user experience</p>
+                    </div>
+
+                     <!-- Feature 2 -->
+                     <div class="text-center">
+                        <div class="w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="ri-tools-line text-2xl text-orange-500"></i>
+                        </div>
+                        <h3 class="font-semibold text-gray-800 mb-2">Easy to Use</h3>
+                        <p class="text-gray-600 text-sm">Intuitive design for seamless user experience</p>
+                    </div>
+
+                     <!-- Feature 2 -->
+                     <div class="text-center">
+                        <div class="w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="ri-tools-line text-2xl text-orange-500"></i>
+                        </div>
+                        <h3 class="font-semibold text-gray-800 mb-2">Easy to Use</h3>
+                        <p class="text-gray-600 text-sm">Intuitive design for seamless user experience</p>
+                    </div>
+
+                     <!-- Feature 2 -->
+                     <div class="text-center">
+                        <div class="w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="ri-tools-line text-2xl text-orange-500"></i>
+                        </div>
+                        <h3 class="font-semibold text-gray-800 mb-2">Easy to Use</h3>
+                        <p class="text-gray-600 text-sm">Intuitive design for seamless user experience</p>
+                    </div>
+
+                    <!-- Feature 3 -->
+                    <div class="text-center">
+                        <div class="w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="ri-customer-service-2-line text-2xl text-orange-500"></i>
+                        </div>
+                        <h3 class="font-semibold text-gray-800 mb-2">24/7 Support</h3>
+                        <p class="text-gray-600 text-sm">Dedicated support team ready to assist you</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
+        <!-- Product Selection Review Section --> 
+        <div class="bg-white rounded-lg shadow-sm p-4 md:p-8 mt-8">
+            <div class="max-w-4xl mx-auto">
+                <div class="text-center mb-8">
+                    <h2 class="text-2xl md:text-3xl font-semibold text-gray-800 mb-2">Quick Checkout</h2>
+                    <p class="text-gray-600">Complete your purchase in a few easy steps</p>
+                </div>
+
+                <!-- Product Selection Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+                    <!-- Product 1 -->
+                    <div class="flex space-x-4 bg-gray-50 p-4 rounded-lg">
+                        <div class="relative w-24 h-24 flex-shrink-0 cursor-pointer hover:opacity-80 transition-opacity" onclick="toggleProductSelection('product1', this.parentElement)">
+                            <img src="https://placehold.co/120x120" alt="Product 1" class="w-full h-full object-cover rounded-lg">
+                            <input type="checkbox" id="product1" class="absolute top-2 right-2 w-4 h-4 accent-orange-500 hidden">
+                        </div>
+                        <div class="flex-1">
+                            <h3 class="font-semibold cursor-pointer hover:text-orange-500 transition-colors" onclick="toggleProductSelection('product1', this.closest('.flex.space-x-4'))">Premium Product A</h3>
+                            <p class="text-orange-500 font-medium mt-1">$299.99</p>
+                            <div class="flex flex-wrap gap-4 mt-2">
+                                <!-- Size Selection -->
+                                <div class="flex items-center">
+                                    <span class="text-sm text-gray-500 mr-2">Size:</span>
+                                    <div class="flex gap-2">
+                                        <button type="button" class="w-8 h-8 flex items-center justify-center rounded-md border-2 border-gray-200 hover:border-orange-500 focus:outline-none" onclick="selectSize(this, 'S')">S</button>
+                                        <button type="button" class="w-8 h-8 flex items-center justify-center rounded-md border-2 border-gray-200 hover:border-orange-500 focus:outline-none" onclick="selectSize(this, 'M')">M</button>
+                                        <button type="button" class="w-8 h-8 flex items-center justify-center rounded-md border-2 border-gray-200 hover:border-orange-500 focus:outline-none" onclick="selectSize(this, 'L')">L</button>
+                                        <button type="button" class="w-8 h-8 flex items-center justify-center rounded-md border-2 border-gray-200 hover:border-orange-500 focus:outline-none" onclick="selectSize(this, 'XL')">XL</button>
+                                    </div>
+                                </div>
+
+                                <!-- Color Selection -->
+                                <div class="flex items-center">
+                                    <span class="text-sm text-gray-500 mr-2">Color:</span>
+                                    <div class="flex gap-2">
+                                        <button type="button" class="w-8 h-8 rounded-full bg-black border-2 border-gray-200 hover:border-orange-500 focus:outline-none" onclick="selectColor(this, 'black')" title="Black"></button>
+                                        <button type="button" class="w-8 h-8 rounded-full bg-blue-500 border-2 border-gray-200 hover:border-orange-500 focus:outline-none" onclick="selectColor(this, 'blue')" title="Blue"></button>
+                                        <button type="button" class="w-8 h-8 rounded-full bg-red-500 border-2 border-gray-200 hover:border-orange-500 focus:outline-none" onclick="selectColor(this, 'red')" title="Red"></button>
+                                    </div>
+                                </div>
+
+                                <!-- Quantity Control -->
+                                <div class="flex items-center">
+                                    <span class="text-sm text-gray-500 mr-2">Qty:</span>
+                                    <div class="flex border rounded">
+                                        <button type="button" class="px-3 py-1 text-gray-600 hover:text-orange-500" onclick="updateQuantity(this, -1)">-</button>
+                                        <input type="number" value="1" min="1" class="w-14 text-center border-x" onchange="updateTotal()">
+                                        <button type="button" class="px-3 py-1 text-gray-600 hover:text-orange-500" onclick="updateQuantity(this, 1)">+</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Product 2 -->
+                    <div class="flex space-x-4 bg-gray-50 p-4 rounded-lg">
+                        <div class="relative w-24 h-24 flex-shrink-0 cursor-pointer hover:opacity-80 transition-opacity" onclick="toggleProductSelection('product2', this.parentElement)">
+                            <img src="https://placehold.co/120x120" alt="Product 2" class="w-full h-full object-cover rounded-lg">
+                            <input type="checkbox" id="product2" class="absolute top-2 right-2 w-4 h-4 accent-orange-500 hidden">
+                        </div>
+                        <div class="flex-1">
+                            <h3 class="font-semibold cursor-pointer hover:text-orange-500 transition-colors" onclick="toggleProductSelection('product2', this.closest('.flex.space-x-4'))">Premium Product B</h3>
+                            <p class="text-orange-500 font-medium mt-1">$199.99</p>
+                            <div class="flex flex-wrap gap-4 mt-2">
+                                <!-- Size Selection -->
+                                <div class="flex items-center">
+                                    <span class="text-sm text-gray-500 mr-2">Size:</span>
+                                    <div class="flex gap-2">
+                                        <button type="button" class="w-8 h-8 flex items-center justify-center rounded-md border-2 border-gray-200 hover:border-orange-500 focus:outline-none" onclick="selectSize(this, 'S')">S</button>
+                                        <button type="button" class="w-8 h-8 flex items-center justify-center rounded-md border-2 border-gray-200 hover:border-orange-500 focus:outline-none" onclick="selectSize(this, 'M')">M</button>
+                                        <button type="button" class="w-8 h-8 flex items-center justify-center rounded-md border-2 border-gray-200 hover:border-orange-500 focus:outline-none" onclick="selectSize(this, 'L')">L</button>
+                                        <button type="button" class="w-8 h-8 flex items-center justify-center rounded-md border-2 border-gray-200 hover:border-orange-500 focus:outline-none" onclick="selectSize(this, 'XL')">XL</button>
+                                    </div>
+                                </div>
+
+                                <!-- Color Selection -->
+                                <div class="flex items-center">
+                                    <span class="text-sm text-gray-500 mr-2">Color:</span>
+                                    <div class="flex gap-2">
+                                        <button type="button" class="w-8 h-8 rounded-full bg-black border-2 border-gray-200 hover:border-orange-500 focus:outline-none" onclick="selectColor(this, 'black')" title="Black"></button>
+                                        <button type="button" class="w-8 h-8 rounded-full bg-blue-500 border-2 border-gray-200 hover:border-orange-500 focus:outline-none" onclick="selectColor(this, 'blue')" title="Blue"></button>
+                                        <button type="button" class="w-8 h-8 rounded-full bg-red-500 border-2 border-gray-200 hover:border-orange-500 focus:outline-none" onclick="selectColor(this, 'red')" title="Red"></button>
+                                    </div>
+                                </div>
+
+                                <!-- Quantity Control -->
+                                <div class="flex items-center">
+                                    <span class="text-sm text-gray-500 mr-2">Qty:</span>
+                                    <div class="flex border rounded">
+                                        <button type="button" class="px-3 py-1 text-gray-600 hover:text-orange-500" onclick="updateQuantity(this, -1)">-</button>
+                                        <input type="number" value="1" min="1" class="w-14 text-center border-x" onchange="updateTotal()">
+                                        <button type="button" class="px-3 py-1 text-gray-600 hover:text-orange-500" onclick="updateQuantity(this, 1)">+</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <form class="space-y-6">
+                    <!-- Personal Information -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-gray-700 font-medium mb-2">First Name</label>
+                            <input type="text" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-orange-400" required>
+                        </div>
+                        <div>
+                            <label class="block text-gray-700 font-medium mb-2">Last Name</label>
+                            <input type="text" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-orange-400" required>
+                        </div>
+                        <div>
+                            <label class="block text-gray-700 font-medium mb-2">Email Address</label>
+                            <input type="email" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-orange-400" required>
+                        </div>
+                        <div>
+                            <label class="block text-gray-700 font-medium mb-2">Phone Number</label>
+                            <input type="tel" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-orange-400" required>
+                        </div>
+                    </div>
+
+                    <!-- Shipping Address -->
+                    <div class="border-t pt-6">
+                        <h3 class="text-lg font-semibold text-gray-800 mb-4">Shipping Address</h3>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div class="md:col-span-2">
+                                <label class="block text-gray-700 font-medium mb-2">Street Address</label>
+                                <input type="text" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-orange-400" required>
+                            </div>
+                            <div>
+                                <label class="block text-gray-700 font-medium mb-2">City</label>
+                                <input type="text" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-orange-400" required>
+                            </div>
+                            <div>
+                                <label class="block text-gray-700 font-medium mb-2">State/Province</label>
+                                <input type="text" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-orange-400" required>
+                            </div>
+                            <div>
+                                <label class="block text-gray-700 font-medium mb-2">ZIP/Postal Code</label>
+                                <input type="text" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-orange-400" required>
+                            </div>
+                            <div>
+                                <label class="block text-gray-700 font-medium mb-2">Country</label>
+                                <select class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-orange-400" required>
+                                    <option value="">Select Country</option>
+                                    <option value="US">United States</option>
+                                    <option value="CA">Canada</option>
+                                    <option value="UK">United Kingdom</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Payment Summary -->
+                    <div class="border-t pt-6">
+                        <h3 class="text-lg font-semibold text-gray-800 mb-4">Payment Summary</h3>
+                        <div class="bg-gray-50 p-4 rounded-lg">
+                            <!-- Selected Products Details -->
+                            <div id="selectedProductsDetails" class="space-y-4 mb-4">
+                                <!-- Products will be listed here dynamically -->
+                            </div>
+                            
+                            <!-- Payment Method -->
+                            <div class="border-t pt-4 mb-4">
+                                <h4 class="font-medium text-gray-800 mb-3">Payment Method</h4>
+                                <div class="space-y-3">
+                                    <label class="flex items-center space-x-3 p-3 border rounded-lg cursor-pointer hover:border-orange-500 transition-colors">
+                                        <input type="radio" name="payment" value="card" class="accent-orange-500" checked>
+                                        <div class="flex items-center space-x-3">
+                                            <i class="ri-bank-card-line text-xl text-orange-500"></i>
+                                            <span>Credit/Debit Card</span>
+                                        </div>
+                                    </label>
+
+                                    <label class="flex items-center space-x-3 p-3 border rounded-lg cursor-pointer hover:border-orange-500 transition-colors">
+                                        <input type="radio" name="payment" value="paypal" class="accent-orange-500">
+                                        <div class="flex items-center space-x-3">
+                                            <i class="ri-paypal-line text-xl text-blue-500"></i>
+                                            <span>PayPal</span>
+                                        </div>
+                                    </label>
+
+                                    <label class="flex items-center space-x-3 p-3 border rounded-lg cursor-pointer hover:border-orange-500 transition-colors">
+                                        <input type="radio" name="payment" value="cash" class="accent-orange-500">
+                                        <div class="flex items-center space-x-3">
+                                            <i class="ri-money-dollar-circle-line text-xl text-green-500"></i>
+                                            <span>Cash on Delivery</span>
+                                        </div>
+                                    </label>
+                                </div>
+
+                                <!-- Credit Card Details (shown/hidden based on selection) -->
+                                <div id="cardDetails" class="mt-4 space-y-4">
+                                    <div class="space-y-2">
+                                        <label class="block text-sm text-gray-600">Card Number</label>
+                                        <input type="text" placeholder="0000 0000 0000 0000" class="w-full px-4 py-2 border rounded-md focus:outline-none focus:border-orange-500">
+                                    </div>
+                                    <div class="grid grid-cols-2 gap-4">
+                                        <div class="space-y-2">
+                                            <label class="block text-sm text-gray-600">Expiry Date</label>
+                                            <input type="text" placeholder="MM/YY" class="w-full px-4 py-2 border rounded-md focus:outline-none focus:border-orange-500">
+                                        </div>
+                                        <div class="space-y-2">
+                                            <label class="block text-sm text-gray-600">CVC</label>
+                                            <input type="text" placeholder="123" class="w-full px-4 py-2 border rounded-md focus:outline-none focus:border-orange-500">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Totals -->
+                            <div class="space-y-3 border-t pt-4 mt-4">
+                                <div class="flex justify-between">
+                                    <span class="text-gray-600">Subtotal</span>
+                                    <span class="font-medium">$0.00</span>
+                                </div>
+                                <div class="flex justify-between">
+                                    <span class="text-gray-600">Shipping</span>
+                                    <span class="font-medium">$9.99</span>
+                                </div>
+                                <div class="flex justify-between border-t pt-3">
+                                    <span class="font-semibold">Total</span>
+                                    <span class="font-semibold text-orange-600">$9.99</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Submit Button -->
+                    <div class="flex justify-center">
+                        <button type="submit" class="px-12 py-3 bg-orange-500 text-white rounded-md hover:bg-orange-600 transition-colors">
+                            Place Order
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <!-- image slider end -->
+    </div>
+
+    <!-- Scroll to top button -->
+    <a href="#" id="scrollToTop" class="fixed bottom-20 right-4 lg:bottom-8 lg:right-8 bg-orange-500 text-white w-10 h-10 rounded-full shadow-lg flex items-center justify-center transform scale-0 transition-all duration-300 hover:bg-orange-600 z-50">
+        <i class="ri-arrow-up-line text-xl"></i>
+    </a>
+    <!-- Floating Action Buttons -->
+    <div class="fixed left-4 bottom-20 lg:bottom-8 z-50">
+        <!-- Main Chat Button -->
+        <a href="#" onclick="toggleFloatingButtons()" class="relative flex items-center justify-center w-10 h-10 bg-orange-500 text-white rounded-full shadow-lg hover:bg-orange-600 transform hover:-translate-y-1 transition-all duration-300 group">
+            <i class="ri-message-3-line text-xl"></i>
+            <span class="absolute left-full ml-2 bg-black text-white text-sm py-1 px-2 rounded whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none">
+                Live Chat
+            </span>
+        </a>
+
+        <!-- Hidden Buttons Container -->
+        <div id="hiddenButtons" class="absolute bottom-16 left-0 flex flex-col gap-3 scale-0 opacity-0 transition-all duration-300 origin-bottom-left">
+            <!-- massenger  -->
+            <a href="https://m.me/username" target="_blank" class="flex items-center group">
+                <div class="flex items-center justify-center w-10 h-10 bg-blue-500 text-white rounded-full shadow-lg hover:bg-blue-600 transform hover:-translate-y-1 transition-all duration-300">
+                    <i class="ri-messenger-line text-2xl"></i>
+                </div>
+                <span class="bg-black text-white text-sm py-1 px-2 rounded ml-2 opacity-0 group-hover:opacity-100 transition-opacity duration-200">Messenger</span>
+            </a>
+            <!-- WhatsApp -->
+            <a href="https://wa.me/1234567890" target="_blank" class="flex items-center group">
+                <div class="flex items-center justify-center w-10 h-10 bg-green-500 text-white rounded-full shadow-lg hover:bg-green-600 transform hover:-translate-y-1 transition-all duration-300">
+                    <i class="ri-whatsapp-line text-2xl"></i>
+                </div>
+                <span class="bg-black text-white text-sm py-1 px-2 rounded ml-2 opacity-0 group-hover:opacity-100 transition-opacity duration-200">WhatsApp</span>
+            </a>
+            
+            <!-- Call -->
+            <a href="tel:+1234567890" class="flex items-center group">
+                <div class="flex items-center justify-center w-10 h-10 bg-blue-500 text-white rounded-full shadow-lg hover:bg-blue-600 transform hover:-translate-y-1 transition-all duration-300">
+                    <i class="ri-phone-line text-2xl"></i>
+                </div>
+                <span class="bg-black text-white text-sm py-1 px-2 rounded ml-2 opacity-0 group-hover:opacity-100 transition-opacity duration-200">Call Us</span>
+            </a>
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <footer class="bg-gray-900 mt-8 pt-8 pb-16 lg:pb-8 text-gray-300">
+        <div class="max-w-7xl mx-auto px-4">
+            <!-- Footer Top -->
+           
+
+            <!-- Footer Bottom -->
+            <div class="mt-8 pt-8 border-t border-gray-800">
+                <div class="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+                    <!-- Copyright -->
+                    <div class="text-gray-400 text-sm">
+                        © 2024 <span class="text-orange-400">Shop Ever</span>. All rights reserved.
+                    </div>
+                    <!-- Payment Methods -->
+                    <div class="flex items-center space-x-4">
+                        <img src="https://placehold.co/40x25" alt="Visa" class="h-6">
+                        <img src="https://placehold.co/40x25" alt="Mastercard" class="h-6">
+                        <img src="https://placehold.co/40x25" alt="PayPal" class="h-6">
+                        <img src="https://placehold.co/40x25" alt="American Express" class="h-6">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Add padding to body to prevent content from being hidden behind fixed bottom nav -->
+   
+
+    <!-- JS -->
+    <script src="src/js/app.js"></script>
+    <script>
+        // Initialize Swiper
+        var thumbSwiper = new Swiper(".thumbSwiper", {
+            spaceBetween: 10,
+            slidesPerView: 4,
+            freeMode: true,
+            watchSlidesProgress: true,
+        });
+        
+        var mainSwiper = new Swiper(".mainSwiper", {
+            spaceBetween: 10,
+            thumbs: {
+                swiper: thumbSwiper,
+            },
+        });
+
+        // Updated Tab switching functionality
+        function switchTab(tabName) {
+            // Hide all tab contents
+            document.querySelectorAll('.tab-content').forEach(content => {
+                content.classList.add('hidden');
+            });
+            
+            // Show selected tab content
+            document.getElementById(tabName + 'Content').classList.remove('hidden');
+            
+            // Reset all tab buttons
+            document.querySelectorAll('button[id$="Tab"]').forEach(tab => {
+                tab.classList.remove('border-orange-500', 'text-orange-500');
+                tab.classList.add('text-gray-600');
+            });
+            
+            // Highlight selected tab button
+            const activeTab = document.getElementById(tabName + 'Tab');
+            activeTab.classList.remove('text-gray-600');
+            activeTab.classList.add('border-orange-500', 'text-orange-500');
+        }
+
+        // Initialize with details tab active when page loads
+        document.addEventListener('DOMContentLoaded', function() {
+            switchTab('details');
+        });
+
+        // Add this to your existing script section
+        function updateQuantity(btn, change) {
+            const input = btn.parentElement.querySelector('input');
+            let value = parseInt(input.value) + change;
+            input.value = value < 1 ? 1 : value;
+            updateTotal();
+        }
+
+        function selectColor(element, color) {
+            // Remove border from siblings
+            element.parentElement.querySelectorAll('span').forEach(span => {
+                span.classList.remove('border-orange-500');
+            });
+            // Add border to selected color
+            element.classList.add('border-orange-500');
+            updateTotal();
+        }
+
+        function selectSize(element, size) {
+            // Remove active class from all size buttons in the same group
+            element.parentElement.querySelectorAll('button').forEach(btn => {
+                btn.classList.remove('border-orange-500', 'bg-orange-50');
+            });
+            // Add active class to selected size
+            element.classList.add('border-orange-500', 'bg-orange-50');
+            // Store selected size as data attribute on the product container
+            element.closest('.flex.space-x-4').setAttribute('data-size', size);
+            updateTotal();
+        }
+
+        function updateTotal() {
+            let subtotal = 0;
+            const selectedProductsDetails = document.getElementById('selectedProductsDetails');
+            selectedProductsDetails.innerHTML = '';
+
+            ['product1', 'product2'].forEach(id => {
+                const checkbox = document.getElementById(id);
+                if (checkbox?.checked) {
+                    const container = checkbox.closest('.flex.space-x-4');
+                    const name = container.querySelector('h3').textContent;
+                    const price = parseFloat(container.querySelector('.text-orange-500').textContent.replace('$', ''));
+                    const quantity = parseInt(container.querySelector('input[type="number"]').value);
+                    const size = container.querySelector('.border-orange-500')?.textContent || 'Not selected';
+                    const colorBtn = container.querySelector('.rounded-full.border-orange-500');
+                    const color = colorBtn ? colorBtn.getAttribute('title') || 'Not selected' : 'Not selected';
+                    const itemTotal = price * quantity;
+                    subtotal += itemTotal;
+
+                    // Add product details to summary
+                    selectedProductsDetails.innerHTML += `
+                        <div class="flex justify-between items-start py-2 ${selectedProductsDetails.children.length > 0 ? 'border-t' : ''}">
+                            <div class="flex-1">
+                                <div class="flex justify-between">
+                                    <span class="font-medium">${name}</span>
+                                    <span class="font-medium">$${itemTotal.toFixed(2)}</span>
+                                </div>
+                                <div class="text-sm text-gray-500 mt-1">
+                                    <span>Size: ${size}</span> • 
+                                    <span>Color: ${color}</span> • 
+                                    <span>Qty: ${quantity}</span>
+                                </div>
+                            </div>
+                        </div>
+                    `;
+                }
+            });
+
+            // Update checkout totals
+            const shipping = 9.99;
+            const total = subtotal + shipping;
+
+            // Update the totals in the Payment Summary section
+            const subtotalElement = document.querySelector('.space-y-3 .font-medium');
+            const totalElement = document.querySelector('.space-y-3 .text-orange-600');
+            
+            if (subtotalElement && totalElement) {
+                subtotalElement.textContent = `$${subtotal.toFixed(2)}`;
+                totalElement.textContent = `$${total.toFixed(2)}`;
+            }
+        }
+
+        // Update the JavaScript functions
+        const products = {
+            product1: {
+                name: 'Premium Product A',
+                price: 299.99,
+                quantity: 1,
+                size: '',
+                color: ''
+            },
+            product2: {
+                name: 'Premium Product B',
+                price: 199.99,
+                quantity: 1,
+                size: '',
+                color: ''
+            }
+        };
+
+        function selectSize(button, size) {
+            // Remove active state from siblings
+            const buttons = button.parentElement.querySelectorAll('button');
+            buttons.forEach(btn => {
+                btn.classList.remove('border-orange-500', 'bg-orange-50');
+                btn.classList.add('border-gray-200');
+            });
+
+            // Add active state to selected button
+            button.classList.remove('border-gray-200');
+            button.classList.add('border-orange-500', 'bg-orange-50');
+
+            // Update product data
+            const productId = button.closest('.flex.space-x-4').querySelector('input[type="checkbox"]').id;
+            products[productId].size = size;
+            updateTotal();
+        }
+
+        function selectColor(button, color) {
+            // Remove active state from siblings
+            const buttons = button.parentElement.querySelectorAll('button');
+            buttons.forEach(btn => {
+                btn.classList.remove('border-orange-500');
+                btn.classList.add('border-gray-200');
+            });
+
+            // Add active state to selected button
+            button.classList.remove('border-gray-200');
+            button.classList.add('border-orange-500');
+
+            // Update product data
+            const productId = button.closest('.flex.space-x-4').querySelector('input[type="checkbox"]').id;
+            products[productId].color = color;
+            updateTotal();
+        }
+
+        function updateQuantity(button, change) {
+            const input = button.parentElement.querySelector('input');
+            const newValue = Math.max(1, parseInt(input.value) + change);
+            input.value = newValue;
+
+            // Update product data
+            const productId = button.closest('.flex.space-x-4').querySelector('input[type="checkbox"]').id;
+            products[productId].quantity = newValue;
+            updateTotal();
+        }
+
+        // Initialize event listeners
+        document.addEventListener('DOMContentLoaded', function() {
+            // Add change listeners to checkboxes
+            document.querySelectorAll('input[type="checkbox"]').forEach(checkbox => {
+                checkbox.addEventListener('change', updateTotal);
+            });
+
+            // Set initial size buttons active state
+            document.querySelectorAll('[data-default-size]').forEach(button => {
+                selectSize(button, button.textContent);
+            });
+        });
+
+        // Add this new function to your existing JavaScript
+        function toggleProductSelection(productId, container) {
+            const checkbox = document.getElementById(productId);
+            checkbox.checked = !checkbox.checked;
+            
+            // Visual feedback for selection
+            if (checkbox.checked) {
+                container.classList.add('ring-2', 'ring-orange-500');
+            } else {
+                container.classList.remove('ring-2', 'ring-orange-500');
+            }
+            
+            updateTotal();
+        }
+
+        // Modify the event listeners initialization
+        document.addEventListener('DOMContentLoaded', function() {
+            // Existing listeners
+            document.querySelectorAll('input[type="checkbox"]').forEach(checkbox => {
+                checkbox.addEventListener('change', (e) => {
+                    const container = checkbox.closest('.flex.space-x-4');
+                    if (checkbox.checked) {
+                        container.classList.add('ring-2', 'ring-orange-500');
+                    } else {
+                        container.classList.remove('ring-2', 'ring-orange-500');
+                    }
+                    updateTotal();
+                });
+            });
+
+            // Rest of your initialization code...
+        });
+
+        // Add this to your existing JavaScript
+        document.addEventListener('DOMContentLoaded', function() {
+            // Payment method handling
+            const paymentInputs = document.querySelectorAll('input[name="payment"]');
+            const cardDetails = document.getElementById('cardDetails');
+
+            paymentInputs.forEach(input => {
+                input.addEventListener('change', function() {
+                    if (this.value === 'card') {
+                        cardDetails.classList.remove('hidden');
+                    } else {
+                        cardDetails.classList.add('hidden');
+                    }
+                });
+            });
+        });
+    </script>
+
+    <style>
+        .mainSwiper {
+            width: 100%;
+            height: auto;
+        }
+        
+        .thumbSwiper {
+            width: 100%;
+            height: auto;
+            box-sizing: border-box;
+            padding: 10px 0;
+        }
+        
+        .thumbSwiper .swiper-slide {
+            opacity: 0.4;
+            transition: opacity 0.3s;
+        }
+        
+        .thumbSwiper .swiper-slide-thumb-active {
+            opacity: 1;
+        }
+
+        /* Add these new styles */
+        button[id$="Tab"].border-orange-500 {
+            border-bottom-width: 2px;
+        }
+        
+        button[id$="Tab"] {
+            transition: all 0.3s ease;
+        }
+    </style>
+</body>
+</html>
+</html>
